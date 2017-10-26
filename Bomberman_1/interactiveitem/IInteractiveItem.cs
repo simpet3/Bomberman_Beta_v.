@@ -8,5 +8,6 @@ namespace BomberManProject.interactiveItem
 {
     interface IInteractiveItem
     {
+        void interact();
     }
 }

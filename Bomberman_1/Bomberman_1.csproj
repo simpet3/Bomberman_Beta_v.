@@ -56,7 +56,6 @@
     <Compile Include="eventHandling\actionKeys\ActionKeyRight.cs" />
     <Compile Include="eventHandling\actionKeys\ActionKeySpace.cs" />
     <Compile Include="eventHandling\actionKeys\ActionKeyUp.cs" />
-    <Compile Include="eventHandling\Bandymas1.cs" />
     <Compile Include="eventHandling\Event.cs" />
     <Compile Include="eventHandling\IAction.cs" />
     <Compile Include="eventHandling\Keyboard.cs" />
@@ -73,7 +72,6 @@
     <Compile Include="services\CommandsService.cs" />
     <Compile Include="services\singleton\ServicesSingleton.cs" />
     <Compile Include="services\singleton\Singleton.cs" />
-    <Compile Include="tile\Builder.cs" />
     <Compile Include="tile\FactoryPattern.cs" />
     <Compile Include="tile\IInteractiveTile.cs" />
     <Compile Include="tile\ImmovableWall.cs" />

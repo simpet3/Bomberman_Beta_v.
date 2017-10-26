@@ -7,29 +7,25 @@ using System.Threading.Tasks;
 using BomberManProject.coordinates;
 using BomberManProject.bomb;
 using BomberManProject.improvement;
+using BomberManProject.interactiveItem;
 
 namespace BomberManProject.tile
 {
-    class PathTile : IInteractiveTile
+    class PathTile : ITile
     {
         public TileCoordinates coordinates { get; private set; }
-        public IImprovement improvement { get; private set; }
+        public IInteractiveItem interactiveItem { get; set; }
         public Bombb bomb { get; private set; }
 
-        public PathTile(TileCoordinates coordinates, IImprovement improvement)
+        public PathTile(TileCoordinates coordinates, IInteractiveItem IInteractiveItem)
         {
             this.coordinates = coordinates;
-            this.improvement = improvement;
+            this.interactiveItem = IInteractiveItem;
         }
 
         public TileCoordinates getCoordinates()
         {
             return this.coordinates;
-        }
-
-        public IImprovement getImprovement()
-        {
-            return this.improvement;
         }
 
         public Boolean isBombPlanted()
