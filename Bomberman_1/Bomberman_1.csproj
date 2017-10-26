@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FE9778D1-F2C6-4E05-965B-588911346499}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Bomberman_1</RootNamespace>
+    <AssemblyName>Bomberman_1</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bomb\Bomb.cs" />
+    <Compile Include="commands\CommandMoveDown.cs" />
+    <Compile Include="commands\CommandMoveLeft.cs" />
+    <Compile Include="commands\CommandMoveRight.cs" />
+    <Compile Include="commands\CommandMoveUp.cs" />
+    <Compile Include="commands\CommandPlantBomb.cs" />
+    <Compile Include="commands\ICommand.cs" />
+    <Compile Include="coordinates\Coordinates.cs" />
+    <Compile Include="coordinates\TileCoordinates.cs" />
+    <Compile Include="eventHandling\actionKeys\ActionKeyDown.cs" />
+    <Compile Include="eventHandling\actionKeys\ActionKeyLeft.cs" />
+    <Compile Include="eventHandling\actionKeys\ActionKeyRight.cs" />
+    <Compile Include="eventHandling\actionKeys\ActionKeySpace.cs" />
+    <Compile Include="eventHandling\actionKeys\ActionKeyUp.cs" />
+    <Compile Include="eventHandling\Bandymas1.cs" />
+    <Compile Include="eventHandling\Event.cs" />
+    <Compile Include="eventHandling\IAction.cs" />
+    <Compile Include="eventHandling\Keyboard.cs" />
+    <Compile Include="fire\Fire.cs" />
+    <Compile Include="improvement\CountImprovement.cs" />
+    <Compile Include="improvement\IImprovement.cs" />
+    <Compile Include="improvement\PowerImprovement.cs" />
+    <Compile Include="interactiveitem\IInteractiveItem.cs" />
+    <Compile Include="map\Map.cs" />
+    <Compile Include="player\HumanPlayer.cs" />
+    <Compile Include="player\Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="services\CommandsService.cs" />
+    <Compile Include="services\singleton\ServicesSingleton.cs" />
+    <Compile Include="services\singleton\Singleton.cs" />
+    <Compile Include="tile\Builder.cs" />
+    <Compile Include="tile\FactoryPattern.cs" />
+    <Compile Include="tile\IInteractiveTile.cs" />
+    <Compile Include="tile\ImmovableWall.cs" />
+    <Compile Include="tile\ITile.cs" />
+    <Compile Include="tile\IWallTile.cs" />
+    <Compile Include="tile\PathTile.cs" />
+    <Compile Include="tile\SimpleWall.cs" />
+    <Compile Include="tile\WallFactory.cs" />
+    <Compile Include="tile\WallsWithBuffsBuilder.cs" />
+    <Compile Include="tile\WallWithBuff.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
