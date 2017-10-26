@@ -29,6 +29,7 @@ namespace Bomberman_1.services
             List<ITile> wallsWithBuffs;
             BuilderPattern builder = new BuilderPattern();
             wallsWithBuffs = builder.buildWallsWithBuffs();
+            //wallsWithBuffs.GetType().GetMethod("PAVADINTI VIENODAI FUNKCIJAS").Invoke(wallsWithBuffs, null);
             return wallsWithBuffs;
         }
         //Generates breakable and unbreakable walls

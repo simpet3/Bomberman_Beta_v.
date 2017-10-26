@@ -1,4 +1,5 @@
 ﻿
+using Bomberman_1.ObserverHelpers;
 using BomberManProject.improvement;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BomberManProject.bomb
 {
-    class Bombb
+    class Bombb : Subject 
     {
         public double durationOfDetonation { get; private set; }
 
