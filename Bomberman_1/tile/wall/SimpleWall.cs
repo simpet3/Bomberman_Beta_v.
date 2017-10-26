@@ -8,10 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BomberManProject.coordinates;
+using Bomberman_1.ObserverHelpers;
 
 namespace BomberManProject.tile.wall
 {
-    class SimpleWall : IWallTile
+     class SimpleWall : Observer, IWallTile
     {
         public Boolean _isDestructed { get; private set; }
         public TileCoordinates coordinates { get; private set; }
@@ -37,6 +38,11 @@ namespace BomberManProject.tile.wall
         public TileCoordinates getCoordinates()
         {
             return this.coordinates;
+        }
+
+        public override void updateAfterExplosion()
+        {
+            throw new NotImplementedException();
         }
 
         //public IImprovement getImprovement()

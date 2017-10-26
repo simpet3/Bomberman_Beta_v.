@@ -8,6 +8,6 @@ namespace Bomberman_1.ObserverHelpers
 {
      abstract class Observer
     {  
-        public abstract void update();
+        public abstract void updateAfterExplosion();
     }
 }

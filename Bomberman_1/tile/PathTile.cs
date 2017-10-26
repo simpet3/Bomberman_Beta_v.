@@ -8,10 +8,11 @@ using BomberManProject.coordinates;
 using BomberManProject.bomb;
 using BomberManProject.improvement;
 using BomberManProject.interactiveItem;
+using Bomberman_1.ObserverHelpers;
 
 namespace BomberManProject.tile
 {
-    class PathTile : ITile
+    class PathTile : Observer,ITile
     {
         public TileCoordinates coordinates { get; private set; }
         public IInteractiveItem interactiveItem { get; set; }
@@ -31,6 +32,11 @@ namespace BomberManProject.tile
         public Boolean isBombPlanted()
         {
             return this.bomb == null ? false : true;
+        }
+
+        public override void updateAfterExplosion()
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -19,8 +19,9 @@ namespace Bomberman_1.ObserverHelpers
         {
             foreach(Observer observer in observers)
             {
-
+                observer.updateAfterExplosion();
             }
+
         }
     }
 }

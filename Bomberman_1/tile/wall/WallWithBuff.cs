@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using BomberManProject.improvement;
 using BomberManProject.coordinates;
+using Bomberman_1.ObserverHelpers;
 
 namespace BomberManProject.tile.wall
 {
-    class WallWithBuff : IInteractiveTile
+    class WallWithBuff : Observer,IInteractiveTile
     {
         IImprovement improvement;
         SimpleWall simpleWall;
@@ -39,6 +40,14 @@ namespace BomberManProject.tile.wall
 
         IImprovement IInteractiveTile.getImprovement()
         {
+            throw new NotImplementedException();
+        }
+
+        public override void updateAfterExplosion()
+        {
+            // pavercia this objeta i Path . kopina objekto savybes . 
+
+
             throw new NotImplementedException();
         }
     }

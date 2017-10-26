@@ -52,6 +52,11 @@ namespace BomberManProject.bomb
             return this.explosionPower + +this.improvements.Where(a => a is PowerImprovement).Sum(b => ((PowerImprovement)b).getImprovement());
         }
 
+        public void explode()
+        {
+            notifyAllObservers();
+            
+        }
 
         public void addImprovement(IImprovement improvement)
         {
