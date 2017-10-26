@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BomberManProject.coordinates;
+using BomberManProject.tile.wall;
 
-namespace BomberManProject.tile.wall
+namespace BomberManProject.tile.build
 {
-    class WallsWithBuffsBuilder
+    class BuilderPattern
     {
         static int PowerBuff = 1;
         static int BombNumberBuff = 2;

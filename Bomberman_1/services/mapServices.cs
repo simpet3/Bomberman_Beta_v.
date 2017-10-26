@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using BomberManProject.map;
 using BomberManProject.tile;
 using BomberManProject.tile.wall;
+using BomberManProject.tile.build;
 using BomberManProject.coordinates;
 
 namespace Bomberman_1.services
@@ -19,20 +20,14 @@ namespace Bomberman_1.services
         public Map generateMap()
         {
             Map map = new Map();
-            for(int i = 0; i < xTileMax; i++)
-            {
-                for(int j = 0; j < yTileMax; j++)
-                {
-
-                }
-            }
+            
             return map;
         }
         //Generates all walls with buff to ITile list
         public List<ITile> generateWallsWithBuffs()
         {
             List<ITile> wallsWithBuffs;
-            WallsWithBuffsBuilder builder = new WallsWithBuffsBuilder();
+            BuilderPattern builder = new BuilderPattern();
             wallsWithBuffs = builder.buildWallsWithBuffs();
             return wallsWithBuffs;
         }

@@ -73,7 +73,7 @@
     <Compile Include="services\mapServices.cs" />
     <Compile Include="services\singleton\ServicesSingleton.cs" />
     <Compile Include="services\singleton\Singleton.cs" />
-    <Compile Include="tile\wall\FactoryPattern.cs" />
+    <Compile Include="tile\build\FactoryPattern.cs" />
     <Compile Include="tile\IInteractiveTile.cs" />
     <Compile Include="tile\wall\ImmovableWall.cs" />
     <Compile Include="tile\ITile.cs" />
@@ -81,7 +81,7 @@
     <Compile Include="tile\PathTile.cs" />
     <Compile Include="tile\wall\SimpleWall.cs" />
     <Compile Include="tile\wall\WallFactory.cs" />
-    <Compile Include="tile\wall\WallsWithBuffsBuilder.cs" />
+    <Compile Include="tile\build\BuilderPattern.cs" />
     <Compile Include="tile\wall\WallWithBuff.cs" />
   </ItemGroup>
   <ItemGroup>

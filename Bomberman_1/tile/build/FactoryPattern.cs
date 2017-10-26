@@ -7,7 +7,7 @@ using BomberManProject.coordinates;
 using BomberManProject.tile;
 using BomberManProject.tile.wall;
 
-namespace BomberManProject.tile.wall
+namespace BomberManProject.tile.build
 {
     class FactoryPattern
     {
