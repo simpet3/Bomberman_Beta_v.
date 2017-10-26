@@ -5,26 +5,25 @@ using System.Text;
 using System.Threading.Tasks;
 using BomberManProject.coordinates;
 
-namespace BomberManProject.tile
+namespace BomberManProject.tile.wall
 {
     class WallsWithBuffsBuilder
     {
-        List<WallWithBuff> walls = new List<WallWithBuff>();
-
         static int PowerBuff = 1;
         static int BombNumberBuff = 2;
         static int yTileMax = 18;
         static int xTileMax = 18;
         int index = 1;
 
-        public WallsWithBuffsBuilder()
+        public List<ITile> buildWallsWithBuffs()
         {
+            List<ITile> walls = new List<ITile>();
             for (int i = 2; i < xTileMax-1; i++)
             {
-                if (i % 2 == 1)
+                if (i % 2 == 0)
                     for (int j = 2; i < yTileMax-1; i++)
                     {
-                        if (j % 2 == 1) {
+                        if (j % 2 == 0) {
                             WallWithBuff wall;
                             if (index == 1)
                             {
@@ -39,8 +38,9 @@ namespace BomberManProject.tile
                                 walls.Add(wall);
                             }
                         }
-                    }
+                    }             
             }
+            return walls;
         }
     }
 }

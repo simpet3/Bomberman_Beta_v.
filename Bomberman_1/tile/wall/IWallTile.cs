@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using BomberManProject.coordinates;
 
 //PAKEICIAU KLASE I INTERFEISA, KAD GAUTUSI FACTORY PATERNAS
-namespace BomberManProject.tile
+namespace BomberManProject.tile.wall
 {
     interface IWallTile : ITile
     {

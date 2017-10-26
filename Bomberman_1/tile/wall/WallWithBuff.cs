@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using BomberManProject.improvement;
 using BomberManProject.coordinates;
 
-namespace BomberManProject.tile
+namespace BomberManProject.tile.wall
 {
     class WallWithBuff : IInteractiveTile
     {
@@ -23,13 +23,13 @@ namespace BomberManProject.tile
             //KOORDINATEJE DEDA BUFFA
             if (buffNumber == powerBuffNum)
             {
-                improvement = new PowerImprovement();
+                this.improvement = new PowerImprovement();
             }
             else if(buffNumber == bombNumBuff)
             {
-                improvement = new CountImprovement();
+                this.improvement = new CountImprovement();
             }
-            improvement.getImprovement();
+            this.improvement.getImprovement();
         }
 
         public TileCoordinates getCoordinates()
