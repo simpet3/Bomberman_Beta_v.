@@ -22,7 +22,7 @@ namespace BomberManProject.tile.build
             for (int i = 2; i < xTileMax-1; i++)
             {
                 if (i % 2 == 0)
-                    for (int j = 2; i < yTileMax-1; i++)
+                    for (int j = 2; j < yTileMax-1; j++)
                     {
                         if (j % 2 == 0) {
                             WallWithBuff wall;
@@ -31,12 +31,14 @@ namespace BomberManProject.tile.build
                                 wall = new WallWithBuff(new TileCoordinates(i, j), PowerBuff);
                                 index = 2;
                                 walls.Add(wall);
+                                Console.WriteLine("Building: SimpleWall+Powerbuff");
                             }
                             else if(index == 2)
                             {
                                 wall = new WallWithBuff(new TileCoordinates(i, j), BombNumberBuff);
                                 index = 1;
                                 walls.Add(wall);
+                                Console.WriteLine("Building: SimpleWall+BombNumberBuff");
                             }
                         }
                     }             

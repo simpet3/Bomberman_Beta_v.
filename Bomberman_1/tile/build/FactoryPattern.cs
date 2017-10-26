@@ -19,18 +19,16 @@ namespace BomberManProject.tile.build
         WallFactory wallFactory = new WallFactory();
 
 
-        //public List<ITile> buildWalls()
-        //{
-        //    TileCoordinates coordinates = new TileCoordinates(3, 3);
-        //    Walls.Add(wallFactory.makeWall(simpleWall, coordinates));
+        public List<ITile> buildWalls()
+        {
+            List<ITile> walls = new List<ITile>();
+            List<ITile> temp1 = buildBreakable();
+            List<ITile> temp2 = buildUnbreakable();
 
-        //    coordinates.changeCoord(5, 5);
-        //    Walls.Add(wallFactory.makeWall(immovableWall, coordinates));
-        //}
-        //public List<ITile> buildBreakable()
-        //{
+            //Adds lists together
+            return walls.Concat(temp1).Concat(temp2).ToList();
+        }
 
-        //}
         public List<ITile> buildUnbreakable()
         {
             List<ITile> walls = new List<ITile>();
@@ -38,7 +36,7 @@ namespace BomberManProject.tile.build
             for(int i = 1; i < xTileMax - 1; i++)
             {
                 if (i % 2 == 1)
-                    for (int j = 1; i < yTileMax - 1; i++)
+                    for (int j = 1; j < yTileMax - 1; j++)
                     {
                         if (j % 2 == 1)
                         {
@@ -60,13 +58,13 @@ namespace BomberManProject.tile.build
             for (int i = 3; i < xTileMax - 1; i++)
             {
                 if (i % 2 == 1)
-                    for (int j = 2; i < yTileMax - 1; i++)
+                    for (int j = 2; j < yTileMax - 1; j++)
                     {
                         if (j % 2 == 0)
                         {
                             WallFactory factory = new WallFactory();
                             TileCoordinates coordinates = new TileCoordinates(i, j);
-                            walls.Add(factory.makeWall("ImmovableWall", coordinates));
+                            walls.Add(factory.makeWall("SimpleWall", coordinates));
                         }
                     }
             }

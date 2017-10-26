@@ -11,11 +11,11 @@ namespace BomberManProject.coordinates
         public int xTileCoordinate { get; private set; }
         public int yTileCoordinate { get; private set; }
 
-        public TileCoordinates()
-        {
-            this.xTileCoordinate = 0;
-            this.yTileCoordinate = 0;
-        }
+        //public TileCoordinates()
+        //{
+        //    this.xTileCoordinate = 0;
+        //    this.yTileCoordinate = 0;
+        //}
         public TileCoordinates(int x, int y)
         {
             this.xTileCoordinate = x;

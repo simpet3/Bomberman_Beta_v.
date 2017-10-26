@@ -10,8 +10,13 @@ namespace BomberManProject.map
 {
     class Map
     {
-        // gal reikia size of map
-        public List<ITile> tiles { get; private set; }
+        public List<ITile> tiles = new List<ITile>();
+        //public List<ITile> tiles { get; private set; }
+
+        public Map(){
+            //this.tiles = null;
+        }
+        
 
         public List<ITile> getTiles()
         {

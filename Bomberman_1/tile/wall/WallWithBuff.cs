@@ -35,7 +35,7 @@ namespace BomberManProject.tile.wall
 
         public TileCoordinates getCoordinates()
         {
-            throw new NotImplementedException();
+            return simpleWall.coordinates;
         }
 
         IImprovement IInteractiveTile.getImprovement()

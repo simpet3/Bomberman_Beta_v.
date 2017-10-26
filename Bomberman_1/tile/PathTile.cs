@@ -18,10 +18,10 @@ namespace BomberManProject.tile
         public IInteractiveItem interactiveItem { get; set; }
         public Bombb bomb { get; private set; }
 
-        public PathTile(TileCoordinates coordinates, IInteractiveItem IInteractiveItem)
+        public PathTile(TileCoordinates coordinates)
         {
             this.coordinates = coordinates;
-            this.interactiveItem = IInteractiveItem;
+            this.interactiveItem = null;
         }
 
         public TileCoordinates getCoordinates()

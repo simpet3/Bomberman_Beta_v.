@@ -76,6 +76,8 @@
     <Compile Include="services\singleton\ServicesSingleton.cs" />
     <Compile Include="services\singleton\Singleton.cs" />
     <Compile Include="tile\build\FactoryPattern.cs" />
+    <Compile Include="tile\build\FillWithPathTile.cs" />
+    <Compile Include="tile\build\PrintMapToConsole.cs" />
     <Compile Include="tile\IInteractiveTile.cs" />
     <Compile Include="tile\wall\ImmovableWall.cs" />
     <Compile Include="tile\ITile.cs" />

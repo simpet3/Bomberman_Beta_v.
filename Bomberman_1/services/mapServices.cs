@@ -13,35 +13,13 @@ namespace Bomberman_1.services
 {
     class mapServices
     {
-        // map size 18 on 18
-        static int yTileMax = 18;
-        static int xTileMax = 18;
-        
         public Map generateMap()
         {
             Map map = new Map();
-            
+            //FillWithPathTile filler = new FillWithPathTile();
+            map.tiles = map.tiles.Concat(new BuilderPattern().buildWallsWithBuffs()).Concat(new FactoryPattern().buildWalls()).ToList();
+            map.tiles = new FillWithPathTile().fillMap(map.tiles);
             return map;
         }
-        //Generates all walls with buff to ITile list
-        public List<ITile> generateWallsWithBuffs()
-        {
-            List<ITile> wallsWithBuffs;
-            BuilderPattern builder = new BuilderPattern();
-            wallsWithBuffs = builder.buildWallsWithBuffs();
-            //wallsWithBuffs.GetType().GetMethod("PAVADINTI VIENODAI FUNKCIJAS").Invoke(wallsWithBuffs, null);
-            return wallsWithBuffs;
-        }
-        //Generates breakable and unbreakable walls
-        //public List<ITile> generateImmovableAndSimpleWalls()
-        //{
-        //    List<ITile> walls;
-        //    FactoryPattern factory = new FactoryPattern();
-        //   // walls = factory.buildWalls();
-        //    return walls;
-
-        //}
-
-
     }
 }

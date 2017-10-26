@@ -21,7 +21,7 @@ namespace BomberManProject.tile.wall
 
         public TileCoordinates getCoordinates()
         {
-            throw new NotImplementedException();
+            return this.coordinates;
         }
     }
 }

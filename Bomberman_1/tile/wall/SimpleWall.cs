@@ -21,7 +21,7 @@ namespace BomberManProject.tile.wall
         public SimpleWall(TileCoordinates coordinates)
         {
             this._isDestructed = false;
-            this.coordinates = new TileCoordinates();
+            this.coordinates = coordinates;
             this.Immovable = false;
         }
 
