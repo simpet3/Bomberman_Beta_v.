@@ -65,6 +65,8 @@
     <Compile Include="improvement\PowerImprovement.cs" />
     <Compile Include="interactiveitem\IInteractiveItem.cs" />
     <Compile Include="map\Map.cs" />
+    <Compile Include="ObserverHelpers\Observer.cs" />
+    <Compile Include="ObserverHelpers\Subject.cs" />
     <Compile Include="player\HumanPlayer.cs" />
     <Compile Include="player\Player.cs" />
     <Compile Include="Program.cs" />
