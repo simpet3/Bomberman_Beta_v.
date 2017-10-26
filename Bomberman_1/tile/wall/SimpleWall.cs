@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BomberManProject.coordinates;
 
-namespace BomberManProject.tile
+namespace BomberManProject.tile.wall
 {
     class SimpleWall : IWallTile
     {
