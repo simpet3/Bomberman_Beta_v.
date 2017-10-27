@@ -42,6 +42,7 @@ namespace BomberManProject.tile.build
                         {
                             WallFactory factory = new WallFactory();
                             TileCoordinates coordinates = new TileCoordinates(i, j);
+
                             walls.Add(factory.makeWall("ImmovableWall", coordinates));
                         }
                     }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Bomberman_1.services;
 using BomberManProject.map;
 using BomberManProject.tile.build;
+using BomberManProject.tile.decorator;
 
 namespace Bomberman_1
 {
@@ -13,9 +14,13 @@ namespace Bomberman_1
     {
         static void Main(string[] args)
         {
+            //Map generation test
             Map map = new mapServices().generateMap();
             PrintMapToConsole a = new PrintMapToConsole();
             a.PrintMap(map.tiles);
+
+            ConsoleDecoratorTest decorator = new ConsoleDecoratorTest();
+            decorator.test();
         }
     }
 }

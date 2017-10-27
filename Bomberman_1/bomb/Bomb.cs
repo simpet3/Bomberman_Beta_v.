@@ -33,6 +33,17 @@ namespace BomberManProject.bomb
             this.improvements = new List<IImprovement>();
         }
 
+        //Default settings
+        public Bombb()
+        {
+            this.durationOfDetonation = 3;
+
+            this.explosionPower = 0;
+
+            this.explosionDistance = 1;
+
+            this.improvements = null;
+        }
 
         public int getExplosionDistance()
         {

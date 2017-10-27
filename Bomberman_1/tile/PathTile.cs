@@ -12,7 +12,7 @@ using Bomberman_1.ObserverHelpers;
 
 namespace BomberManProject.tile
 {
-    class PathTile : Observer,ITile
+    class PathTile : Observer, ITile
     {
         public TileCoordinates coordinates { get; private set; }
         public IInteractiveItem interactiveItem { get; set; }
@@ -23,6 +23,7 @@ namespace BomberManProject.tile
             this.coordinates = coordinates;
             this.interactiveItem = null;
         }
+
 
         public TileCoordinates getCoordinates()
         {

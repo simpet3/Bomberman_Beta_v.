@@ -18,17 +18,17 @@ namespace BomberManProject.tile.wall
         public ITile makeWall(string wallType, TileCoordinates coordinates)
         {
             if (wallType.Equals(empty, StringComparison.Ordinal)) {  
-                Console.WriteLine("making: Empty tile");
+                //Console.WriteLine("making: Empty tile");
                 return null;
             }
             else if (wallType.Equals(simpleWall, StringComparison.Ordinal))
             {
-                Console.WriteLine("making: SimpleWall");
+                //Console.WriteLine("making: SimpleWall");
                 return new SimpleWall(coordinates);
             }
             else if (wallType.Equals(immovableWall, StringComparison.Ordinal))
             {       
-                Console.WriteLine("making: ImmovableWall");
+                //Console.WriteLine("making: ImmovableWall");
                 return new ImmovableWall(coordinates);
             }
             return null;

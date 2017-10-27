@@ -12,6 +12,7 @@ namespace BomberManProject.tile.wall
         bool IWallTile.Immovable { get; set; }
         TileCoordinates coordinates { get; set; }
         bool Immovable { get; set; }
+        public string color { set; get; }
 
         public ImmovableWall(TileCoordinates coordinates)
         {
@@ -23,5 +24,6 @@ namespace BomberManProject.tile.wall
         {
             return this.coordinates;
         }
+
     }
 }
