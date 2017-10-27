@@ -28,7 +28,7 @@ namespace BomberManProject.tile.decorator
 
             VisualComponent v = (DarkColorDecorator)dcd;
             DarkColorDecorator aa = (DarkColorDecorator)v;
-            aa.GetType().GetMember("moveUp").Initialize();
+            aa.GetType().GetMethod("moveUp").Invoke(aa, null);
             //Console.Write(aa);
             Console.WriteLine(dcd.getColor());
 

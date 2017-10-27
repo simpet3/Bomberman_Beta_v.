@@ -1,4 +1,5 @@
-﻿using BomberManProject.services;
+﻿using Bomberman_1.services;
+using BomberManProject.services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace BomberManProject.Singleton
         private static ServicesSingleton _instance;
 
         public CommandsService commandService;
+        public CoordinatesTransformationService coordinatesTransformationService;
 
         private ServicesSingleton() { }
 

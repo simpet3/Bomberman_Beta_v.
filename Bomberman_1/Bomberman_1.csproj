@@ -72,6 +72,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="services\CommandsService.cs" />
+    <Compile Include="services\CommandsValidityService.cs" />
+    <Compile Include="services\CoordinatesTransformationService.cs" />
     <Compile Include="services\mapServices.cs" />
     <Compile Include="services\singleton\ServicesSingleton.cs" />
     <Compile Include="services\singleton\Singleton.cs" />
