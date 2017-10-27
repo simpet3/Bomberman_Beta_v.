@@ -32,7 +32,7 @@ namespace BomberManProject.tile.build
                     }
                     if (isfree)
                     {
-                        Console.WriteLine("Build: Filling with path");
+                        //Console.WriteLine("Build: Filling with path");
                         ITile path = new PathTile(new BomberManProject.coordinates.TileCoordinates(i, j));
                         map.Add(path);
                     }

@@ -80,6 +80,13 @@
     <Compile Include="tile\build\FactoryPattern.cs" />
     <Compile Include="tile\build\FillWithPathTile.cs" />
     <Compile Include="tile\build\PrintMapToConsole.cs" />
+    <Compile Include="tile\Decorator\BlueDecorator.cs" />
+    <Compile Include="tile\Decorator\BrightColorDecorator.cs" />
+    <Compile Include="tile\Decorator\Decorator.cs" />
+    <Compile Include="tile\Decorator\ConsoleDecoratorTest.cs" />
+    <Compile Include="tile\Decorator\DarkColorDecorator.cs" />
+    <Compile Include="tile\Decorator\GreenDecorator.cs" />
+    <Compile Include="tile\Decorator\VisualComponent.cs" />
     <Compile Include="tile\IInteractiveTile.cs" />
     <Compile Include="tile\wall\ImmovableWall.cs" />
     <Compile Include="tile\ITile.cs" />

@@ -31,14 +31,14 @@ namespace BomberManProject.tile.build
                                 wall = new WallWithBuff(new TileCoordinates(i, j), PowerBuff);
                                 index = 2;
                                 walls.Add(wall);
-                                Console.WriteLine("Building: SimpleWall+Powerbuff");
+                                //Console.WriteLine("Building: SimpleWall+Powerbuff");
                             }
                             else if(index == 2)
                             {
                                 wall = new WallWithBuff(new TileCoordinates(i, j), BombNumberBuff);
                                 index = 1;
                                 walls.Add(wall);
-                                Console.WriteLine("Building: SimpleWall+BombNumberBuff");
+                                //Console.WriteLine("Building: SimpleWall+BombNumberBuff");
                             }
                         }
                     }             
