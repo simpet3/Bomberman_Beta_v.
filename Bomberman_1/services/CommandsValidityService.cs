@@ -1,4 +1,5 @@
-﻿using BomberManProject.map;
+﻿using BomberManProject.commands;
+using BomberManProject.map;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,26 +17,28 @@ namespace Bomberman_1.services
             this.map = map;
         }
 
-        public validateMoveCommand(ICommand command)
-        {
 
+        // dabaigt implementint visus metodus 
+        public Boolean validateMoveCommand(ICommand command)
+        {
+            return false;
         }
 
-        private validateMoveRightCommand(ICommand command)
+        private Boolean validateMoveRightCommand(ICommand command)
         {
-
+            return false;
         }
-        private validateMoveUpCommand(ICommand command)
+        private Boolean validateMoveUpCommand(ICommand command)
         {
-
+            return false;
         }
-        private validateMoveDownCommand(ICommand command)
+        private Boolean validateMoveDownCommand(ICommand command)
         {
-
+            return false;
         }
-        private validateMoveLeftCommand(ICommand command)
+        private Boolean validateMoveLeftCommand(ICommand command)
         {
-
+            return false;
         }
     }
 }
