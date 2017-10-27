@@ -12,10 +12,10 @@ namespace BomberManProject.coordinates
 
         public int YCoordinate { get; private set; }
 
-        public Coordinates()
+        public Coordinates(int xCoordinate, int yCoordinate)
         {
-            this.xCoordinate = 0;
-            this.YCoordinate = 0;
+            this.xCoordinate = xCoordinate;
+            this.YCoordinate = yCoordinate;
         }
 
         public Coordinates(TileCoordinates coordinates)
