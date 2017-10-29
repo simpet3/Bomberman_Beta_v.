@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace BomberManProject.improvement
 {
-    interface IImprovement
+    abstract class Improvement
     {
-         int getImprovement();
+         public abstract int getImprovement();
     }
 }

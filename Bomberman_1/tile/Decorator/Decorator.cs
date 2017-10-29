@@ -7,23 +7,19 @@ using BomberManProject.bomb;
 using BomberManProject.coordinates;
 using BomberManProject.map;
 using BomberManProject.player;
+using BomberManProject.improvement;
 
 namespace BomberManProject.tile.decorator
 {
-    abstract class Decorator : VisualComponent
+    abstract class Decorator : Improvement
     {
-        private VisualComponent visualComponent = null;
+        protected Improvement improvement;
 
-        protected string color = "";
 
-        protected Decorator(VisualComponent visualComponent)
+        protected Decorator(Improvement improvement)
         {
-            this.visualComponent = visualComponent;
+            this.improvement = improvement;
         }
 
-        public override string getColor()
-        {
-            return color + visualComponent.getColor();
-        }
     }
 }

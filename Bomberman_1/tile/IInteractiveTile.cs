@@ -10,6 +10,6 @@ namespace BomberManProject.tile
 {
     interface IInteractiveTile : ITile
     {
-        IImprovement getImprovement();
+        Improvement getImprovement();
     }
 }

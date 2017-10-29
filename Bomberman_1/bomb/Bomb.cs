@@ -17,10 +17,10 @@ namespace BomberManProject.bomb
 
         public int explosionDistance { get; private set; }
 
-        public List<IImprovement> improvements { get; private set; }
+        public List<Improvement> improvements { get; private set; }
 
 
-        public Bombb(double durationOfDetonation, int explosionPower, int explosionDistance, List<IImprovement> improvements)
+        public Bombb(double durationOfDetonation, int explosionPower, int explosionDistance, List<Improvement> improvements)
         {
             this.durationOfDetonation = durationOfDetonation;
 
@@ -30,7 +30,7 @@ namespace BomberManProject.bomb
 
             this.improvements = improvements;
 
-            this.improvements = new List<IImprovement>();
+            this.improvements = new List<Improvement>();
         }
 
         //Default settings
@@ -69,7 +69,7 @@ namespace BomberManProject.bomb
             
         }
 
-        public void addImprovement(IImprovement improvement)
+        public void addImprovement(Improvement improvement)
         {
             this.improvements.Add(improvement);
         }

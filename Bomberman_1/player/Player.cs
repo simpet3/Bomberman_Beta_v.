@@ -8,11 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using BomberManProject.tile.decorator;
 using Bomberman_1.services;
+using BomberManProject.improvement;
 
 //Player implements this class
 namespace BomberManProject.player
 {
-    abstract class Player : VisualComponent
+    abstract class Player : Improvement
     {
         public Boolean isDead { get; private set; }
 
@@ -22,7 +23,7 @@ namespace BomberManProject.player
 
         public Map map;
 
-        public string color = " Color";
+        public Improvement improvement { set; get; }
 
         public Player(Bombb bomb, Coordinates coordinates, Map map)
         {
@@ -39,10 +40,12 @@ namespace BomberManProject.player
             this.coordinates = new Coordinates(0,0);
             this.map = new mapServices().generateMap();
         }
-
-        public override string getColor()
+        public Player(Player player)
         {
-            return this.color;
+            this.isDead = player.isDead;
+            this.bomb = player.bomb;
+            this.coordinates = player.coordinates;
+            this.map = player.map;
         }
 
         public void plantBomb()
@@ -52,7 +55,7 @@ namespace BomberManProject.player
 
         public void moveUp()
         {
-            Console.Write("aA");
+
         }
 
         public void moveDown()
@@ -70,5 +73,12 @@ namespace BomberManProject.player
 
         }
 
+        public override int getImprovement()
+        {
+            if (improvement != null)
+                return improvement.getImprovement();
+            else // if improvement does not exist
+                return -1;
+        }
     }
 }
