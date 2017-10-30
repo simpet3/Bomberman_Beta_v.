@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BomberManProject.bomb;
+using BomberManProject.coordinates;
+using BomberManProject.map;
 using BomberManProject.player;
 using BomberManProject.improvement;
 
@@ -10,20 +13,46 @@ namespace BomberManProject.tile.decorator
 {
     class BombCountImprovementDecorator : Decorator
     {
-        public BombCountImprovementDecorator(Improvement improvement) : base(improvement)
+        public BombCountImprovementDecorator(Player player) : base(player)
         {
-            if (improvement.GetType().ToString() == "BomberManProject.tile.decorator.BombCountImprovementDecorator")
+            if (player.GetType().ToString() == "BomberManProject.tile.decorator.BombCountImprovementDecorator")
             {
-                int count = this.improvement.getImprovement() + 1;
-                this.improvement = new CountImprovement(count);
+                int count = this._player.getImprovement() + 1;
+                this._player.improvement = new CountImprovement(count);
             }
             else
-                this.improvement = new CountImprovement();
+            this._player.improvement = new CountImprovement();
         }
 
         public override int getImprovement()
         {
-            return improvement.getImprovement();
+            return _player.improvement.getImprovement();
+        }
+
+        public override Bombb bomb
+        {
+            get { return base.bomb; }
+            set { base.bomb = value; }
+        }
+        public override Coordinates coordinates
+        {
+            get { return base.coordinates; }
+            set { base.coordinates = value; }
+        }
+        public override Boolean isDead
+        {
+            get { return base.isDead; }
+            set { base.isDead = value; }
+        }
+        public override Map map
+        {
+            get { return base.map; }
+            set { base.map = value; }
+        }
+        public override Improvement improvement
+        {
+            get { return base.improvement; }
+            set { base.improvement = value; }
         }
     }
 }

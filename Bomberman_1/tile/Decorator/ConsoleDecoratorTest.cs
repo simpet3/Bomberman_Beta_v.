@@ -29,6 +29,9 @@ namespace BomberManProject.tile.decorator
             // o norint gauti jo galias reikia gauti improvedPlayer.getType().toString() ir lyginti su abiem
             // power-upais, o grazinamas skaicius yra to power-upo stiprumo lygis
 
+
+            // MANO TESTAVIMAS
+            // i ataskaita kanors graziau sumastysiu
             List<Improvement> imp = new List<Improvement>();
             imp.Add(new PowerImprovement());
             HumanPlayer p = new HumanPlayer(new Bombb(10, 1, 1, imp), new Coordinates(0, 0), new mapServices().generateMap());
@@ -36,20 +39,20 @@ namespace BomberManProject.tile.decorator
             Console.WriteLine(p.getImprovement());
 
             PowerImprovementDecorator pid = new PowerImprovementDecorator(p);
-           // Console.WriteLine(pid.GetType().ToString());
-            
             Console.WriteLine(pid.getImprovement());
+
             PowerImprovementDecorator pid2 = new PowerImprovementDecorator(pid);
             Console.WriteLine(pid2.getImprovement());
 
-            BombCountImprovementDecorator CI = new BombCountImprovementDecorator(pid2);
-            Console.WriteLine(CI.getImprovement());
+            BombCountImprovementDecorator bci = new BombCountImprovementDecorator(pid2);
+            Console.WriteLine(bci.getImprovement());
 
-            BombCountImprovementDecorator CI2 = new BombCountImprovementDecorator(CI);
-            Console.WriteLine(CI2.getImprovement());
+            BombCountImprovementDecorator bci2 = new BombCountImprovementDecorator(bci);
+            Console.WriteLine(bci2.getImprovement());
 
-            PowerImprovementDecorator pi = new PowerImprovementDecorator(CI2);
-            Console.WriteLine(pi.getImprovement());
+            Bombb b = bci2.bomb;
+            Console.WriteLine(b.explosionPower);
+
         }
     }
 

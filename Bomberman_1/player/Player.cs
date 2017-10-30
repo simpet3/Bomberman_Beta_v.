@@ -15,15 +15,15 @@ namespace BomberManProject.player
 {
     abstract class Player : Improvement
     {
-        public Boolean isDead { get; private set; }
+        public  Boolean isDead { get; set; }
 
-        public Bombb bomb { get; private set; }
+        public  Bombb bomb { get; set; }
 
-        public Coordinates coordinates { get; private set; }
+        public  Coordinates coordinates { get; set; }
 
-        public Map map;
+        public  Map map { set; get; }
 
-        public Improvement improvement { set; get; }
+        public  Improvement improvement { set; get; }
 
         public Player(Bombb bomb, Coordinates coordinates, Map map)
         {
@@ -37,7 +37,7 @@ namespace BomberManProject.player
         {
             this.isDead = false;
             this.bomb = new Bombb();
-            this.coordinates = new Coordinates(0,0);
+            this.coordinates = new Coordinates(0, 0);
             this.map = new mapServices().generateMap();
         }
         public Player(Player player)
@@ -60,7 +60,7 @@ namespace BomberManProject.player
 
         public void moveDown()
         {
-
+            Console.WriteLine("aa");
         }
 
         public void moveLeft()
