@@ -8,21 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using BomberManProject.tile.decorator;
 using Bomberman_1.services;
+using BomberManProject.improvement;
 
 //Player implements this class
 namespace BomberManProject.player
 {
-    abstract class Player : VisualComponent
+    abstract class Player : Improvement
     {
-        public Boolean isDead { get; private set; }
+        public  Boolean isDead { get; set; }
 
-        public Bombb bomb { get; private set; }
+        public  Bombb bomb { get; set; }
 
-        public Coordinates coordinates { get; private set; }
+        public  Coordinates coordinates { get; set; }
 
-        public Map map;
+        public  Map map { set; get; }
 
-        public string color = " Color";
+        public  Improvement improvement { set; get; }
 
         public Player(Bombb bomb, Coordinates coordinates, Map map)
         {
@@ -36,13 +37,15 @@ namespace BomberManProject.player
         {
             this.isDead = false;
             this.bomb = new Bombb();
-            this.coordinates = new Coordinates(0,0);
+            this.coordinates = new Coordinates(0, 0);
             this.map = new mapServices().generateMap();
         }
-
-        public override string getColor()
+        public Player(Player player)
         {
-            return this.color;
+            this.isDead = player.isDead;
+            this.bomb = player.bomb;
+            this.coordinates = player.coordinates;
+            this.map = player.map;
         }
 
         public void plantBomb()
@@ -52,12 +55,12 @@ namespace BomberManProject.player
 
         public void moveUp()
         {
-            Console.Write("aA");
+
         }
 
         public void moveDown()
         {
-
+            Console.WriteLine("aa");
         }
 
         public void moveLeft()
@@ -70,5 +73,12 @@ namespace BomberManProject.player
 
         }
 
+        public override int getImprovement()
+        {
+            if (improvement != null)
+                return improvement.getImprovement();
+            else // if improvement does not exist
+                return -1;
+        }
     }
 }

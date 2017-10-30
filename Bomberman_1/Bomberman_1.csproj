@@ -69,7 +69,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="improvement\CountImprovement.cs" />
-    <Compile Include="improvement\IImprovement.cs" />
+    <Compile Include="improvement\Improvement.cs" />
     <Compile Include="improvement\PowerImprovement.cs" />
     <Compile Include="interactiveitem\IInteractiveItem.cs" />
     <Compile Include="map\Map.cs" />
@@ -91,13 +91,10 @@
     <Compile Include="tile\build\FactoryPattern.cs" />
     <Compile Include="tile\build\FillWithPathTile.cs" />
     <Compile Include="tile\build\PrintMapToConsole.cs" />
-    <Compile Include="tile\Decorator\BlueDecorator.cs" />
-    <Compile Include="tile\Decorator\BrightColorDecorator.cs" />
     <Compile Include="tile\Decorator\Decorator.cs" />
     <Compile Include="tile\Decorator\ConsoleDecoratorTest.cs" />
-    <Compile Include="tile\Decorator\DarkColorDecorator.cs" />
-    <Compile Include="tile\Decorator\GreenDecorator.cs" />
-    <Compile Include="tile\Decorator\VisualComponent.cs" />
+    <Compile Include="tile\Decorator\BombCountImprovementDecorator.cs" />
+    <Compile Include="tile\Decorator\PowerImprovementDecorator.cs" />
     <Compile Include="tile\IInteractiveTile.cs" />
     <Compile Include="tile\wall\ImmovableWall.cs" />
     <Compile Include="tile\ITile.cs" />

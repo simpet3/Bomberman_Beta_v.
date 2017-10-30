@@ -11,7 +11,7 @@ namespace BomberManProject.tile.wall
 {
     class WallWithBuff : Observer,IInteractiveTile
     {
-        IImprovement improvement;
+        Improvement improvement;
         SimpleWall simpleWall;
         static int powerBuffNum = 1;
         static int bombNumBuff = 2;
@@ -38,7 +38,7 @@ namespace BomberManProject.tile.wall
             return simpleWall.coordinates;
         }
 
-        IImprovement IInteractiveTile.getImprovement()
+        Improvement IInteractiveTile.getImprovement()
         {
             throw new NotImplementedException();
         }

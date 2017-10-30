@@ -7,23 +7,48 @@ using BomberManProject.bomb;
 using BomberManProject.coordinates;
 using BomberManProject.map;
 using BomberManProject.player;
+using BomberManProject.improvement;
 
 namespace BomberManProject.tile.decorator
 {
-    abstract class Decorator : VisualComponent
+    abstract class Decorator : Player
     {
-        private VisualComponent visualComponent = null;
+        protected Player _player = null;
 
-        protected string color = "";
-
-        protected Decorator(VisualComponent visualComponent)
+        public Decorator(Player player)
         {
-            this.visualComponent = visualComponent;
+            this._player = player;     
         }
 
-        public override string getColor()
+        public override int getImprovement()
         {
-            return color + visualComponent.getColor();
+            return _player.getImprovement();
+        }
+
+        public virtual Bombb bomb
+        {
+            get { return _player.bomb; }
+            set { _player.bomb = value; }
+        }
+        public virtual Coordinates coordinates
+        {
+            get { return _player.coordinates; }
+            set { _player.coordinates = value; }
+        }
+        public virtual Boolean isDead
+        {
+            get { return _player.isDead; }
+            set { _player.isDead = value; }
+        }
+        public virtual Map map
+        {
+            get { return _player.map; }
+            set { _player.map = value; }
+        }
+        public virtual Improvement improvement
+        {
+            get { return _player.improvement; }
+            set { _player.improvement = value; }
         }
     }
 }

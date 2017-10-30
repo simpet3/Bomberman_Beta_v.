@@ -4,24 +4,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BomberManProject.player;
 
 namespace BomberManProject.improvement
 {
-    class CountImprovement : IImprovement, IInteractiveItem
+    class CountImprovement : Improvement, IInteractiveItem
     {
         //Starting ammount of bombs a player can plant
-        int improvementCount = 1;
+        int improvementCount { set; get; }
 
         public CountImprovement()
         {
-            this.improvementCount++;
+            this.improvementCount = 2;
+        }
+        public CountImprovement(int bombNum)
+        {
+            this.improvementCount = bombNum;
         }
 
-        public int getImprovement()
+        public override int getImprovement()
         {
             return this.improvementCount;
         }
 
+        public void increaseCount()
+        {
+            this.improvementCount++;
+        }
         public void interact()
         {
             throw new NotImplementedException();

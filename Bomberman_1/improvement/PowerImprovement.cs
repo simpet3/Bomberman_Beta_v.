@@ -4,23 +4,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BomberManProject.player;
 
 namespace BomberManProject.improvement
 {
-    class PowerImprovement : IImprovement, IInteractiveItem
+    class PowerImprovement : Improvement, IInteractiveItem
     {
         //Starting bomb power is 0;
-        int improvementPower = 0;
+        int improvementPower { set; get; }
 
         //Improves bomb's power by 1;
         public PowerImprovement()
         {
-            this.improvementPower++;
+            this.improvementPower = 1;
         }
-
-        public int getImprovement()
+        public PowerImprovement(int power)
         {
-            return this.improvementPower;
+            this.improvementPower = power;
+        }
+        public override int getImprovement()
+        {
+            return improvementPower;
+        }
+        public void increasePower()
+        {
+            improvementPower++;
         }
 
         public void interact()
