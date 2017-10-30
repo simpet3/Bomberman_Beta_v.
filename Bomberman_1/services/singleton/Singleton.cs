@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BomberManProject.map;
 using BomberManProject.player;
+using Bomberman_1.services.mouse_Data;
 
 namespace BomberManProject.Singleton
 {
@@ -12,6 +13,7 @@ namespace BomberManProject.Singleton
     {
         private static Singleton _instance;
 
+        public MouseData mouseData = new MouseData(0, 0);
         private Map map;
         private List<Player> players;
 
@@ -24,6 +26,11 @@ namespace BomberManProject.Singleton
                 return new Singleton();
             }
             return _instance;
+        }
+
+        public MouseData getMouseData()
+        {
+            return this.mouseData;
         }
     }
 }
