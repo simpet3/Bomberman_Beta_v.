@@ -18,6 +18,7 @@ namespace BomberManProject.eventHandling
         }
         public override ICommand handleEvent(Player player)
         {
+            Console.WriteLine("Bridge paternas: kuria komanda Command patternui.");
             return action.createCommand(player);
         }
     }

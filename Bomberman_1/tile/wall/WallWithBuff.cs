@@ -46,9 +46,7 @@ namespace BomberManProject.tile.wall
         public override void updateAfterExplosion()
         {
             // pavercia this objeta i Path . kopina objekto savybes . 
-
-
-            throw new NotImplementedException();
+            Console.WriteLine(" Wall with buff - Tile responded to exploded bomb");
         }
     }
 }

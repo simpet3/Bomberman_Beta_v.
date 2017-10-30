@@ -14,7 +14,7 @@ namespace BomberManProject.player
             _player = player;
         }
 
-        public HumanPlayer(Bombb bomb, Coordinates coordinates, Map map) : base(bomb, coordinates, map)
+        public HumanPlayer(Bomb bomb, Coordinates coordinates, Map map) : base(bomb, coordinates, map)
         {
 
         }

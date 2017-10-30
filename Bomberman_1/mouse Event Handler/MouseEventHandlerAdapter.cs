@@ -16,7 +16,7 @@ namespace Bomberman_1.mouse_Event_Handler
     {
         Event _event { get; set; }
 
-        public override ICommand handleMouseEvent(Player player, MouseEventArgs e)
+        public ICommand handleMouseEvent(Player player, MouseEventArgs e)
         {
             // i singletona idet Mouse coordinates.//////////////////////////////
             var mouseData = Singleton.getInstance().mouseData;

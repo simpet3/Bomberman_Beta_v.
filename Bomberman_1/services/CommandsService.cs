@@ -15,10 +15,14 @@ namespace BomberManProject.services
         public void addCommand(ICommand command)
         {
             this.commandsList.Add(command);
+
+            /// pradiniai versijai :
+            executeCommands();
         }
 
         public void executeCommands()
         {
+            Console.WriteLine(" command patterno servizas : vykdo komanda. ");
             foreach(ICommand command in commandsList)
             {
                 command.execute();

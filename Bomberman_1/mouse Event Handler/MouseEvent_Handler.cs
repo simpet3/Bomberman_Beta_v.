@@ -11,14 +11,11 @@ using System.Windows.Forms;
 
 namespace Bomberman_1.mouse_Event_Handler
 {
-    class MouseEvent_Handler 
+    interface MouseEvent_Handler 
     {
-        
-       
-        public virtual ICommand handleMouseEvent(Player player, MouseEventArgs e)
-        {
-            // valdlymo komandos kitos ne zaidimo metu.
-            return null;
-        }
+
+
+        ICommand handleMouseEvent(Player player, MouseEventArgs e);
+
     }
 }

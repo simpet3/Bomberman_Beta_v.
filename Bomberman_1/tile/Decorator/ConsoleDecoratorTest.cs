@@ -34,7 +34,7 @@ namespace BomberManProject.tile.decorator
             // i ataskaita kanors graziau sumastysiu
             List<Improvement> imp = new List<Improvement>();
             imp.Add(new PowerImprovement());
-            HumanPlayer p = new HumanPlayer(new Bombb(10, 1, 1, imp), new Coordinates(0, 0), new mapServices().generateMap());
+            HumanPlayer p = new HumanPlayer(new Bomb(10, 1, 1, imp), new Coordinates(0, 0), new mapServices().generateMap());
 
             Console.WriteLine(p.getImprovement());
 
@@ -50,7 +50,7 @@ namespace BomberManProject.tile.decorator
             BombCountImprovementDecorator bci2 = new BombCountImprovementDecorator(bci);
             Console.WriteLine(bci2.getImprovement());
 
-            Bombb b = bci2.bomb;
+            Bomb b = bci2.bomb;
             Console.WriteLine(b.explosionPower);
 
         }

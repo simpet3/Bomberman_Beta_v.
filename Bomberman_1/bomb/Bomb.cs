@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BomberManProject.bomb
 {
-    class Bombb : Subject 
+    class Bomb : Subject 
     {
         public double durationOfDetonation { get; private set; }
 
@@ -20,7 +20,7 @@ namespace BomberManProject.bomb
         public List<Improvement> improvements { get; private set; }
 
 
-        public Bombb(double durationOfDetonation, int explosionPower, int explosionDistance, List<Improvement> improvements)
+        public Bomb(double durationOfDetonation, int explosionPower, int explosionDistance, List<Improvement> improvements)
         {
             this.durationOfDetonation = durationOfDetonation;
 
@@ -34,7 +34,7 @@ namespace BomberManProject.bomb
         }
 
         //Default settings
-        public Bombb()
+        public Bomb()
         {
             this.durationOfDetonation = 3;
 
@@ -65,6 +65,7 @@ namespace BomberManProject.bomb
 
         public void explode()
         {
+            Console.WriteLine("bomb exploded.");
             notifyAllObservers();
             
         }

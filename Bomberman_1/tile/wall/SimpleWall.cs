@@ -42,7 +42,7 @@ namespace BomberManProject.tile.wall
 
         public override void updateAfterExplosion()
         {
-            throw new NotImplementedException();
+            Console.WriteLine(" Simple wall - responded to exploded bomb");
         }
 
         //public IImprovement getImprovement()

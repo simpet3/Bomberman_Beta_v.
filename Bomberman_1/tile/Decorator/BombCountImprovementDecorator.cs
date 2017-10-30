@@ -29,7 +29,7 @@ namespace BomberManProject.tile.decorator
             return _player.improvement.getImprovement();
         }
 
-        public override Bombb bomb
+        public override Bomb bomb
         {
             get { return base.bomb; }
             set { base.bomb = value; }
