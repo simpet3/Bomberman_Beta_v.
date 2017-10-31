@@ -33,26 +33,34 @@ namespace BomberManProject.tile.decorator
 
             // MANO TESTAVIMAS
             // i ataskaita kanors graziau sumastysiu
+            Console.WriteLine();
+            Console.WriteLine("Player has no power-up");
             List<Improvement> imp = new List<Improvement>();
             imp.Add(new PowerImprovement());
-            HumanPlayer p = new HumanPlayer(new Bombb(10, 1, 1, imp), new Coordinates(0, 0), new mapServices().generateMap());
+            HumanPlayer p = new HumanPlayer(new Bomb(10, 1, 1, imp), new Coordinates(0, 0), new mapServices().generateMap());
 
-            //Console.WriteLine(p.getImprovement());
+            Console.WriteLine(p.getImprovement());
 
             PowerImprovementDecorator pid = new PowerImprovementDecorator(p);
-            //Console.WriteLine(pid.getImprovement());
+            Console.WriteLine("Player has level "+ pid.getImprovement()+ " power improvement");
 
             PowerImprovementDecorator pid2 = new PowerImprovementDecorator(pid);
-            //Console.WriteLine(pid2.getImprovement());
+            Console.WriteLine("Player has level " + pid2.getImprovement() + " power improvement");
 
+            Console.WriteLine("Player picked up different power-up and lost previous one");
             BombCountImprovementDecorator bci = new BombCountImprovementDecorator(pid2);
-            //Console.WriteLine(bci.getImprovement());
+            Console.WriteLine("Player has level " + bci.getImprovement() + " bomb count improvement");
 
             BombCountImprovementDecorator bci2 = new BombCountImprovementDecorator(bci);
-            //Console.WriteLine(bci2.getImprovement());
+            Console.WriteLine("Player has level " + bci2.getImprovement() + " bomb count improvement");
 
+            //<<<<<<< HEAD
             //Bombb b = bci2.bomb;
             //Console.WriteLine(b.explosionPower);
+            //=======
+            //Bomb b = bci2.bomb;
+            //Console.WriteLine(b.explosionPower);
+//>>>>>>> b99dbf3e3ef462631d7e8b30f68faaf65d3585b8
 
         }
     }

@@ -25,7 +25,7 @@ namespace BomberManProject.tile.decorator
             return _player.getImprovement();
         }
 
-        public virtual Bombb bomb
+        public virtual Bomb bomb
         {
             get { return _player.bomb; }
             set { _player.bomb = value; }

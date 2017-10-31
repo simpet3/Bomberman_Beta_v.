@@ -34,6 +34,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,11 +62,19 @@
     <Compile Include="eventHandling\IAction.cs" />
     <Compile Include="eventHandling\Keyboard.cs" />
     <Compile Include="fire\Fire.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="improvement\CountImprovement.cs" />
     <Compile Include="improvement\Improvement.cs" />
     <Compile Include="improvement\PowerImprovement.cs" />
     <Compile Include="interactiveitem\IInteractiveItem.cs" />
     <Compile Include="map\Map.cs" />
+    <Compile Include="mouse Event Handler\MouseEvent_Handler.cs" />
+    <Compile Include="mouse Event Handler\MouseEventHandlerAdapter.cs" />
     <Compile Include="ObserverHelpers\Observer.cs" />
     <Compile Include="ObserverHelpers\Subject.cs" />
     <Compile Include="player\HumanPlayer.cs" />
@@ -75,6 +85,7 @@
     <Compile Include="services\CommandsValidityService.cs" />
     <Compile Include="services\CoordinatesTransformationService.cs" />
     <Compile Include="services\mapServices.cs" />
+    <Compile Include="services\mouse Data\MouseData.cs" />
     <Compile Include="services\singleton\ServicesSingleton.cs" />
     <Compile Include="services\singleton\Singleton.cs" />
     <Compile Include="tile\build\FactoryPattern.cs" />

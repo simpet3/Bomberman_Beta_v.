@@ -17,7 +17,7 @@ namespace BomberManProject.player
     {
         public  Boolean isDead { get; set; }
 
-        public  Bombb bomb { get; set; }
+        public  Bomb bomb { get; set; }
 
         public  Coordinates coordinates { get; set; }
 
@@ -25,7 +25,7 @@ namespace BomberManProject.player
 
         public  Improvement improvement { set; get; }
 
-        public Player(Bombb bomb, Coordinates coordinates, Map map)
+        public Player(Bomb bomb, Coordinates coordinates, Map map)
         {
             this.isDead = false;
             this.bomb = bomb;
@@ -36,41 +36,41 @@ namespace BomberManProject.player
         public Player()
         {
             this.isDead = false;
-            this.bomb = new Bombb();
+            this.bomb = new Bomb();
             this.coordinates = new Coordinates(0, 0);
             this.map = new mapServices().generateMap();
         }
-        public Player(Player player)
-        {
-            this.isDead = player.isDead;
-            this.bomb = player.bomb;
-            this.coordinates = player.coordinates;
-            this.map = player.map;
-        }
+        //public Player(Player player)
+        //{
+        //    this.isDead = player.isDead;
+        //    this.bomb = player.bomb;
+        //    this.coordinates = player.coordinates;
+        //    this.map = player.map;
+        //}
 
         public void plantBomb()
         {
-            /// put bomb
+            Console.WriteLine("Planting bomb");
         }
 
         public void moveUp()
         {
-
+            Console.WriteLine("Moving up");
         }
 
         public void moveDown()
         {
-            Console.WriteLine("aa");
+            Console.WriteLine("Moving down");
         }
 
         public void moveLeft()
         {
-
+            Console.WriteLine("Moving left");
         }
 
         public void moveRight()
         {
-
+            Console.WriteLine("Moving right");
         }
 
         public override int getImprovement()

@@ -12,13 +12,15 @@ namespace BomberManProject.Singleton
     {
         private static ServicesSingleton _instance;
 
-        public CommandsService commandService;
+        public CommandsService commandService = new CommandsService();
         public CoordinatesTransformationService coordinatesTransformationService;
+
 
         private ServicesSingleton() { }
 
         public static ServicesSingleton getInstance()
         {
+            Console.WriteLine("singleton veiki.");
             if (_instance == null)
             {
                 return new ServicesSingleton();

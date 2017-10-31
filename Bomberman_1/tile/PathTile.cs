@@ -16,7 +16,7 @@ namespace BomberManProject.tile
     {
         public TileCoordinates coordinates { get; private set; }
         public IInteractiveItem interactiveItem { get; set; }
-        public Bombb bomb { get; private set; }
+        public Bomb bomb { get; private set; }
 
         public PathTile(TileCoordinates coordinates)
         {
@@ -37,7 +37,7 @@ namespace BomberManProject.tile
 
         public override void updateAfterExplosion()
         {
-            throw new NotImplementedException();
+            Console.WriteLine(" Path Tile - responded to exploded bomb");
         }
     }
 }

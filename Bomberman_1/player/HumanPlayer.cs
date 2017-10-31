@@ -8,13 +8,13 @@ namespace BomberManProject.player
 {
     class HumanPlayer : Player
     {
-        private Player _player;
-        public HumanPlayer(Player player) : base(player)
-        {
-            _player = player;
-        }
+        //private Player _player;
+        //public HumanPlayer(Player player) : base(player)
+        //{
+        //    _player = player;
+        //}
 
-        public HumanPlayer(Bombb bomb, Coordinates coordinates, Map map) : base(bomb, coordinates, map)
+        public HumanPlayer(Bomb bomb, Coordinates coordinates, Map map) : base(bomb, coordinates, map)
         {
 
         }

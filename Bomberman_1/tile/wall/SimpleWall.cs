@@ -13,7 +13,7 @@ using Bomberman_1.ObserverHelpers;
 namespace BomberManProject.tile.wall
 {
      class SimpleWall : Observer, IWallTile
-    {
+     {
         public Boolean _isDestructed { get; private set; }
         public TileCoordinates coordinates { get; private set; }
         public bool Immovable { set; get; }
@@ -42,7 +42,7 @@ namespace BomberManProject.tile.wall
 
         public override void updateAfterExplosion()
         {
-            throw new NotImplementedException();
+            Console.WriteLine(" Simple wall - responded to exploded bomb");
         }
 
         //public IImprovement getImprovement()

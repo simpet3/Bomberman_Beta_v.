@@ -9,10 +9,8 @@ namespace BomberManProject.tile.wall
 {
     class ImmovableWall : IWallTile
     {
-        bool IWallTile.Immovable { get; set; }
         TileCoordinates coordinates { get; set; }
-        bool Immovable { get; set; }
-        public string color { set; get; }
+        public bool Immovable { get; set; }
 
         public ImmovableWall(TileCoordinates coordinates)
         {
