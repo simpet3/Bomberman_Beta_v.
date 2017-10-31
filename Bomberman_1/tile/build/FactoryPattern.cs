@@ -13,10 +13,10 @@ namespace BomberManProject.tile.build
     {
         static int xTileMax = 18;
         static int yTileMax = 18;
-        static string empty = "Empty";
-        static string simpleWall = "SimpleWall";
-        static string immovableWall = "ImmovableWall";
-        WallFactory wallFactory = new WallFactory();
+        //static string empty = "Empty";
+        //static string simpleWall = "SimpleWall";
+        //static string immovableWall = "ImmovableWall";
+        //WallFactory wallFactory = new WallFactory();
 
 
         public List<ITile> buildWalls()

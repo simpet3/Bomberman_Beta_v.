@@ -40,13 +40,13 @@ namespace BomberManProject.player
             this.coordinates = new Coordinates(0, 0);
             this.map = new mapServices().generateMap();
         }
-        public Player(Player player)
-        {
-            this.isDead = player.isDead;
-            this.bomb = player.bomb;
-            this.coordinates = player.coordinates;
-            this.map = player.map;
-        }
+        //public Player(Player player)
+        //{
+        //    this.isDead = player.isDead;
+        //    this.bomb = player.bomb;
+        //    this.coordinates = player.coordinates;
+        //    this.map = player.map;
+        //}
 
         public void plantBomb()
         {

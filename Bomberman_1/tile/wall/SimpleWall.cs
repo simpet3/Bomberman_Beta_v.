@@ -13,7 +13,7 @@ using Bomberman_1.ObserverHelpers;
 namespace BomberManProject.tile.wall
 {
      class SimpleWall : Observer, IWallTile
-    {
+     {
         public Boolean _isDestructed { get; private set; }
         public TileCoordinates coordinates { get; private set; }
         public bool Immovable { set; get; }

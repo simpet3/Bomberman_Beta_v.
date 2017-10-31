@@ -19,6 +19,11 @@ namespace BomberManProject.tile.build
         int[,] map = new int[xTileMax, yTileMax];
         public void PrintMap(List<ITile> list)
         {
+            Console.WriteLine("Sugeneruoto žemėlapio atvaizdavimas skaičiais:");
+            Console.WriteLine("0 - nenugriaunama siena");
+            Console.WriteLine("1 - nugriaunama siena");
+            Console.WriteLine("2 - nugriaunama siena, po kuria yra power-up'as");
+            Console.WriteLine("3 - praeinamas kelias");
             for (int i = 0; i < xTileMax; i++)
             {
                 for (int j = 0; j < yTileMax; j++)
@@ -49,7 +54,8 @@ namespace BomberManProject.tile.build
                 {
                     //Console.Write(tile.getCoordinates().xTileCoordinate);
                     map[tile.getCoordinates().xTileCoordinate, tile.getCoordinates().yTileCoordinate] = 3;
-                }    
+                }   
+                 
             }
             for (int i = 0; i < xTileMax; i++)
             {
@@ -59,6 +65,7 @@ namespace BomberManProject.tile.build
                     Console.Write(map[i, j]);
                 }
             }
+            Console.WriteLine();
         }
     }
 }

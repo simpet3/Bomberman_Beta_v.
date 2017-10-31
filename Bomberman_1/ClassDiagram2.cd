@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BomberManProject.bomb.Bombb" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAEAAAAAABCAECAQAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>bomb\Bomb.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BomberManProject.commands.CommandMoveDown" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>commands\CommandMoveDown.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BomberManProject.commands.CommandMoveLeft" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>commands\CommandMoveLeft.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BomberManProject.commands.CommandMoveRight" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>commands\CommandMoveRight.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BomberManProject.commands.CommandMoveUp" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>commands\CommandMoveUp.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BomberManProject.commands.CommandPlantBomb" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>commands\CommandPlantBomb.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BomberManProject.coordinates.Coordinates" Collapsed="true">
+    <Position X="16.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>coordinates\Coordinates.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BomberManProject.coordinates.TileCoordinates" Collapsed="true">
+    <Position X="15" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>coordinates\TileCoordinates.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BomberManProject.eventHandling.actionKeys.ActionKeyDown" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>eventHandling\actionKeys\ActionKeyDown.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BomberManProject.eventHandling.actionKeys.ActionKeyLeft" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>eventHandling\actionKeys\ActionKeyLeft.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BomberManProject.eventHandling.actionKeys.ActionKeyRight" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="16.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>eventHandling\actionKeys\ActionKeyRight.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BomberManProject.eventHandling.actionKeys.ActionKeySpace" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>eventHandling\actionKeys\ActionKeySpace.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BomberManProject.eventHandling.actionKeys.ActionKeyUp" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>eventHandling\actionKeys\ActionKeyUp.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BomberManProject.eventHandling.Event" Collapsed="true">
+    <Position X="0.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>eventHandling\Event.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BomberManProject.eventHandling.Keyboard" Collapsed="true">
+    <Position X="0.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>eventHandling\Keyboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BomberManProject.Fire.Fire" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>fire\Fire.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BomberManProject.improvement.CountImprovement" Collapsed="true">
+    <Position X="0.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQACAAAAAAAAAAgAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>improvement\CountImprovement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BomberManProject.improvement.Improvement" Collapsed="true">
+    <Position X="5.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>improvement\Improvement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BomberManProject.improvement.PowerImprovement" Collapsed="true">
+    <Position X="9.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAACCAAAAAAABAAAAA=</HashCode>
+      <FileName>improvement\PowerImprovement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BomberManProject.map.Map" Collapsed="true">
+    <Position X="16.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>map\Map.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bomberman_1.ObserverHelpers.Observer" Collapsed="true">
+    <Position X="3" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ObserverHelpers\Observer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bomberman_1.ObserverHelpers.Subject" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>ObserverHelpers\Subject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BomberManProject.player.HumanPlayer" Collapsed="true">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>player\HumanPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BomberManProject.player.Player" Collapsed="true">
+    <Position X="5.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAABAAAAACAQgACgAAAAABAAAAAAAAAACEAAAAA=</HashCode>
+      <FileName>player\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BomberManProject.Singleton.ServicesSingleton" Collapsed="true">
+    <Position X="22" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAIAAAAAQAAAAAAAQAAAA=</HashCode>
+      <FileName>services\singleton\ServicesSingleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BomberManProject.Singleton.Singleton" Collapsed="true">
+    <Position X="13.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEEAAgAIAAAAAAAAAAAAAAAAAAAAQAIAAAAAAAAAA=</HashCode>
+      <FileName>services\singleton\Singleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BomberManProject.services.CommandsService" Collapsed="true">
+    <Position X="22" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAgAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>services\CommandsService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bomberman_1.services.CommandsValidityService" Collapsed="true">
+    <Position X="13.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAEAAAAAAAAAAQAABABAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>services\CommandsValidityService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bomberman_1.services.CoordinatesTransformationService" Collapsed="true">
+    <Position X="18.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAEAAAAAAAAAAAAAAAAAAAAACAAQA=</HashCode>
+      <FileName>services\CoordinatesTransformationService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bomberman_1.services.mapServices" Collapsed="true">
+    <Position X="18.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAQAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>services\mapServices.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BomberManProject.tile.build.BuilderPattern" Collapsed="true">
+    <Position X="22" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAABAEAwAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>tile\build\BuilderPattern.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BomberManProject.tile.build.FactoryPattern" Collapsed="true">
+    <Position X="20.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAgAAAAAAwAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>tile\build\FactoryPattern.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BomberManProject.tile.build.FillWithPathTile" Collapsed="true">
+    <Position X="22" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAwAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>tile\build\FillWithPathTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BomberManProject.tile.build.PrintMapToConsole" Collapsed="true">
+    <Position X="20.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAAAEAAAAAAAAACAAAAAAAAwIBAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tile\build\PrintMapToConsole.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BomberManProject.tile.decorator.BombCountImprovementDecorator" Collapsed="true">
+    <Position X="5.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAACAAgACgAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tile\Decorator\BombCountImprovementDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BomberManProject.tile.decorator.Decorator" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAACAAgACgCAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tile\Decorator\Decorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BomberManProject.tile.decorator.PowerImprovementDecorator" Collapsed="true">
+    <Position X="7.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAACAAgACgAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tile\Decorator\PowerImprovementDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BomberManProject.tile.wall.ImmovableWall" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAACAAAAAAgAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>tile\wall\ImmovableWall.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="BomberManProject.tile.wall.SimpleWall" Collapsed="true">
+    <Position X="0.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACQAIAAAgAAAAAAAAAAABAAAAACAAAAA=</HashCode>
+      <FileName>tile\wall\SimpleWall.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BomberManProject.tile.wall.WallFactory" Collapsed="true">
+    <Position X="16.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIQAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>tile\wall\WallFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BomberManProject.tile.wall.WallWithBuff" Collapsed="true">
+    <Position X="3" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAEAACCAIAAAAAAAAAAAgAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>tile\wall\WallWithBuff.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BomberManProject.tile.PathTile" Collapsed="true">
+    <Position X="5.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAIAACgAAAAAAAAAQAAAACAAAAAAAA=</HashCode>
+      <FileName>tile\PathTile.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="BomberManProject.tile.decorator.ConsoleDecoratorTest" Collapsed="true">
+    <Position X="15" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>tile\Decorator\ConsoleDecoratorTest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="BomberManProject.commands.ICommand" Collapsed="true">
+    <Position X="15" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>commands\ICommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BomberManProject.eventHandling.IAction" Collapsed="true">
+    <Position X="13.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>eventHandling\IAction.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BomberManProject.interactiveItem.IInteractiveItem" Collapsed="true">
+    <Position X="16.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>interactiveitem\IInteractiveItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BomberManProject.tile.wall.IWallTile" Collapsed="true">
+    <Position X="8.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>tile\wall\IWallTile.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BomberManProject.tile.IInteractiveTile" Collapsed="true">
+    <Position X="10.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tile\IInteractiveTile.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BomberManProject.tile.ITile" Collapsed="true">
+    <Position X="9.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tile\ITile.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
