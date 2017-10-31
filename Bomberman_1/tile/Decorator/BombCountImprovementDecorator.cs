@@ -15,7 +15,7 @@ namespace BomberManProject.tile.decorator
     {
         public BombCountImprovementDecorator(Player player) : base(player)
         {
-            if (player.GetType().ToString() == "BomberManProject.tile.decorator.BombCountImprovementDecorator")
+            if (player.GetType().ToString().Equals("BomberManProject.tile.decorator.BombCountImprovementDecorator"))
             {
                 int count = this._player.getImprovement() + 1;
                 this._player.improvement = new CountImprovement(count);

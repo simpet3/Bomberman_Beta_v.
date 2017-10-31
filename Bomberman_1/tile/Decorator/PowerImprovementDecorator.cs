@@ -15,7 +15,7 @@ namespace BomberManProject.tile.decorator
     {
         public PowerImprovementDecorator(Player player) : base(player)
         {
-            if (player.GetType().ToString() == "BomberManProject.tile.decorator.PowerImprovementDecorator")
+            if (player.GetType().ToString().Equals("BomberManProject.tile.decorator.PowerImprovementDecorator"))
             {
                 int power = player.getImprovement() + 1;
                 //Console.WriteLine("power " + power);
