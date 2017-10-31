@@ -15,6 +15,7 @@ namespace BomberManProject.tile.decorator
 {
     class ConsoleDecoratorTest
     {
+        // uses->PowerImprovementDecorator ir BombCountImprovementDecorator
         public void test()
         {
             //DECORATOR VEIKIMAS
@@ -36,22 +37,22 @@ namespace BomberManProject.tile.decorator
             imp.Add(new PowerImprovement());
             HumanPlayer p = new HumanPlayer(new Bombb(10, 1, 1, imp), new Coordinates(0, 0), new mapServices().generateMap());
 
-            Console.WriteLine(p.getImprovement());
+            //Console.WriteLine(p.getImprovement());
 
             PowerImprovementDecorator pid = new PowerImprovementDecorator(p);
-            Console.WriteLine(pid.getImprovement());
+            //Console.WriteLine(pid.getImprovement());
 
             PowerImprovementDecorator pid2 = new PowerImprovementDecorator(pid);
-            Console.WriteLine(pid2.getImprovement());
+            //Console.WriteLine(pid2.getImprovement());
 
             BombCountImprovementDecorator bci = new BombCountImprovementDecorator(pid2);
-            Console.WriteLine(bci.getImprovement());
+            //Console.WriteLine(bci.getImprovement());
 
             BombCountImprovementDecorator bci2 = new BombCountImprovementDecorator(bci);
-            Console.WriteLine(bci2.getImprovement());
+            //Console.WriteLine(bci2.getImprovement());
 
-            Bombb b = bci2.bomb;
-            Console.WriteLine(b.explosionPower);
+            //Bombb b = bci2.bomb;
+            //Console.WriteLine(b.explosionPower);
 
         }
     }
