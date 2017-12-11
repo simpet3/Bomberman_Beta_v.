@@ -35,14 +35,15 @@
             // tmrMoving
             // 
             this.tmrMoving.Enabled = true;
+            this.tmrMoving.Interval = 200;
             this.tmrMoving.Tick += new System.EventHandler(this.tmrMoving_Tick);
             // 
-            // FormView2
+            // FormView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 431);
-            this.Name = "FormView2";
+            this.ClientSize = new System.Drawing.Size(984, 882);
+            this.Name = "FormView";
             this.Text = "FormView2";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormView_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormView_KeyDown);
