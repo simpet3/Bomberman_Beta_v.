@@ -60,6 +60,7 @@
     <Compile Include="Drawing\MapPartDisplayVisitor.cs" />
     <Compile Include="Drawing\Path.cs" />
     <Compile Include="Drawing\Undestructable.cs" />
+    <Compile Include="Drawing\WithBuff.cs" />
     <Compile Include="eventHandling\actionKeys\ActionKeyDown.cs" />
     <Compile Include="eventHandling\actionKeys\ActionKeyLeft.cs" />
     <Compile Include="eventHandling\actionKeys\ActionKeyRight.cs" />

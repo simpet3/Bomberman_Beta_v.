@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Bomberman_1.Drawing
 {
-    public class Path : IMapPart
+    public class WithBuff : IMapPart
     {
         public void accept(IMapPartVisitor mapPartVisitor, object sender, PaintEventArgs e)
         {

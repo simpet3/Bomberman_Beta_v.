@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BomberManProject.map;
+using BomberManProject.tile.build;
+using Bomberman_1.services;
 
 namespace Bomberman_1
 {
@@ -26,20 +29,17 @@ namespace Bomberman_1
         public FormView()
         {
             InitializeComponent();
-            DrawMap();
-            _x = 50;
-            _y = 50;
+            _x = 0;
+            _y = 0;
             _objPosition = Position.Down;
         }
-        public void DrawMap()
-        {
-            IMapPart mapPart = new MapParts();
-            mapPart.accept(new MapPartDisplayVisitor());
-        }
+        
         private void FormView_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.FillRectangle(Brushes.BlueViolet, _x, _y, 100, 100);
-            //e.Graphics.DrawImage(new Bitmap("mushroom.png"), _x, _y, 64, 64);
+            e.Graphics.FillRectangle(Brushes.BlueViolet, _x, _y, 45, 45);
+
+            IMapPart mapPart = new MapParts();
+            mapPart.accept(new MapPartDisplayVisitor(), sender, e);
         }
 
         private void tmrMoving_Tick(object sender, EventArgs e)
@@ -83,5 +83,7 @@ namespace Bomberman_1
                 _objPosition = Position.Down;
             }
         }
+
+        
     }
 }

@@ -31,9 +31,9 @@ namespace Bomberman_1
         static void Main(string[] args)
         {
 
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new FormView());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FormView());
 
             //Map generation test
             //Map map = new mapServices().generateMap();
@@ -44,74 +44,74 @@ namespace Bomberman_1
             //ConsoleDecoratorTest decorator = new ConsoleDecoratorTest();
             //decorator.test();
             //
-            
 
-        //    Boolean loopActive = true;
-        //    ConsoleKeyInfo keyInfo;
-        //    HumanPlayer humanPlayer = new HumanPlayer();
-        //    Console.WriteLine("\n\n Command and bridge pattern test \n");
-        //    while (loopActive)
-        //    {
-        //        keyInfo = Console.ReadKey();
-        //        deleteLetter();
-        //        switch (keyInfo.KeyChar)
-        //        {
-        //            case 'w':
-        //                Keyboard keyboardUp = new Keyboard(new ActionKeyUp());
-        //                ICommand commandUp = keyboardUp.handleEvent(humanPlayer);
-        //                ServicesSingleton.getInstance().commandService.addCommand(commandUp);
-        //                break;
-        //            case 'a':
-        //                Keyboard keyboardLeft = new Keyboard(new ActionKeyLeft());
-        //                ICommand commandLeft = keyboardLeft.handleEvent(humanPlayer);
-        //                ServicesSingleton.getInstance().commandService.addCommand(commandLeft);
-        //                break;
-        //            case 'd':
-        //                Keyboard keyboardRight = new Keyboard(new ActionKeyRight());
-        //                ICommand commandRight = keyboardRight.handleEvent(humanPlayer);
-        //                ServicesSingleton.getInstance().commandService.addCommand(commandRight);
-        //                break;
-        //            case 's':
-        //                Keyboard keyboardDown = new Keyboard(new ActionKeyDown());
-        //                ICommand commandDown = keyboardDown.handleEvent(humanPlayer);
-        //                ServicesSingleton.getInstance().commandService.addCommand(commandDown);
-        //                break;
-        //            case '1':
-        //                Keyboard keyboardSpace = new Keyboard(new ActionKeySpace());
-        //                ICommand commandSpace = keyboardSpace.handleEvent(humanPlayer);
-        //                ServicesSingleton.getInstance().commandService.addCommand(commandSpace);
-        //                break;
-        //            case 't':
-        //                loopActive = false;
-        //                break;
-        //        }
-        //    }
-        //    TestObserver();
-            
-        //    Console.ReadKey();
-        //}
-        //private static void deleteLetter()
-        //{
-        //    Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
-        //    Console.WriteLine(" ");
-        //}
 
-        //private static void TestObserver()
-        //{
-        //    Console.WriteLine("\n\nObserver pattern test \n");
-        //    //observers
-        //    var pathTIle = new PathTile(new TileCoordinates(0,0));
-        //    var simpleTile = new SimpleWall(new TileCoordinates(0, 0)); 
-        //    var wallWithBuff = new WallWithBuff(new TileCoordinates(0, 0),1);
+            //    Boolean loopActive = true;
+            //    ConsoleKeyInfo keyInfo;
+            //    HumanPlayer humanPlayer = new HumanPlayer();
+            //    Console.WriteLine("\n\n Command and bridge pattern test \n");
+            //    while (loopActive)
+            //    {
+            //        keyInfo = Console.ReadKey();
+            //        deleteLetter();
+            //        switch (keyInfo.KeyChar)
+            //        {
+            //            case 'w':
+            //                Keyboard keyboardUp = new Keyboard(new ActionKeyUp());
+            //                ICommand commandUp = keyboardUp.handleEvent(humanPlayer);
+            //                ServicesSingleton.getInstance().commandService.addCommand(commandUp);
+            //                break;
+            //            case 'a':
+            //                Keyboard keyboardLeft = new Keyboard(new ActionKeyLeft());
+            //                ICommand commandLeft = keyboardLeft.handleEvent(humanPlayer);
+            //                ServicesSingleton.getInstance().commandService.addCommand(commandLeft);
+            //                break;
+            //            case 'd':
+            //                Keyboard keyboardRight = new Keyboard(new ActionKeyRight());
+            //                ICommand commandRight = keyboardRight.handleEvent(humanPlayer);
+            //                ServicesSingleton.getInstance().commandService.addCommand(commandRight);
+            //                break;
+            //            case 's':
+            //                Keyboard keyboardDown = new Keyboard(new ActionKeyDown());
+            //                ICommand commandDown = keyboardDown.handleEvent(humanPlayer);
+            //                ServicesSingleton.getInstance().commandService.addCommand(commandDown);
+            //                break;
+            //            case '1':
+            //                Keyboard keyboardSpace = new Keyboard(new ActionKeySpace());
+            //                ICommand commandSpace = keyboardSpace.handleEvent(humanPlayer);
+            //                ServicesSingleton.getInstance().commandService.addCommand(commandSpace);
+            //                break;
+            //            case 't':
+            //                loopActive = false;
+            //                break;
+            //        }
+            //    }
+            //    TestObserver();
 
-        //    //target
-        //    var bomb = new Bomb();
+            //    Console.ReadKey();
+            //}
+            //private static void deleteLetter()
+            //{
+            //    Console.SetCursorPosition(Console.CursorLeft - 1, Console.CursorTop);
+            //    Console.WriteLine(" ");
+            //}
 
-        //    bomb.atach(pathTIle);
-        //    bomb.atach(simpleTile);
-        //    bomb.atach(wallWithBuff);
+            //private static void TestObserver()
+            //{
+            //    Console.WriteLine("\n\nObserver pattern test \n");
+            //    //observers
+            //    var pathTIle = new PathTile(new TileCoordinates(0,0));
+            //    var simpleTile = new SimpleWall(new TileCoordinates(0, 0)); 
+            //    var wallWithBuff = new WallWithBuff(new TileCoordinates(0, 0),1);
 
-        //    bomb.explode();
+            //    //target
+            //    var bomb = new Bomb();
+
+            //    bomb.atach(pathTIle);
+            //    bomb.atach(simpleTile);
+            //    bomb.atach(wallWithBuff);
+
+            //    bomb.explode();
         }
 
     }

@@ -17,33 +17,70 @@ namespace Bomberman_1.Drawing
     public class MapPartDisplayVisitor : IMapPartVisitor
     {
         public int[,] map = mapInConsole();
+        static int yTileMax = 18;
+        static int xTileMax = 18;
 
-        static public int [,] mapInConsole()
+        static public int[,] mapInConsole()
         {
             Map map = new mapServices().generateMap();
             PrintMapToConsole a = new PrintMapToConsole();
             return a.PrintMap(map.tiles);
         }
-        
-        public void visit(MapParts mapParts)
-        {
 
-            Console.WriteLine("Displaying map");
+        public void visit(MapParts mapParts, object sender, PaintEventArgs e)
+        {
+           
         }
 
-        public void visit(Path path)
+        public void visit(Path path, object sender, PaintEventArgs e)
         {
-            Console.WriteLine("displaying path");
+            //for (int i = 0; i < xTileMax; i++)
+            //{
+            //    Console.WriteLine();
+            //    for (int j = 0; j < yTileMax; j++)
+            //    {
+            //        if(map[i,j] == 3)
+            //            e.Graphics.FillRectangle(Brushes.WhiteSmoke, i * 50, j * 50, 50, 50);
+            //    }
+            //}
         }
 
-        public void visit(Destructable destructable)
+        public void visit(Destructable destructable, object sender, PaintEventArgs e)
         {
-            Console.WriteLine("displaying destructable");
+            for (int i = 0; i < xTileMax; i++)
+            {
+                Console.WriteLine();
+                for (int j = 0; j < yTileMax; j++)
+                {
+                    if (map[i, j] == 1)
+                        e.Graphics.FillRectangle(Brushes.Brown, i * 50, j * 50, 50, 50);
+                }
+            }
         }
 
-        public void visit(Undestructable undestructable)
+        public void visit(Undestructable undestructable, object sender, PaintEventArgs e)
         {
-            Console.WriteLine("displaying undestructable");
+            for (int i = 0; i < xTileMax; i++)
+            {
+                Console.WriteLine();
+                for (int j = 0; j < yTileMax; j++)
+                {
+                    if (map[i, j] == 0)
+                        e.Graphics.FillRectangle(Brushes.Black, i * 50, j * 50, 50, 50);
+                }
+            }
+        }
+        public void visit(WithBuff withBuff, object sender, PaintEventArgs e)
+        {
+            for (int i = 0; i < xTileMax; i++)
+            {
+                Console.WriteLine();
+                for (int j = 0; j < yTileMax; j++)
+                {
+                    if (map[i, j] == 2)
+                        e.Graphics.FillRectangle(Brushes.Blue, i * 50, j * 50, 50, 50);
+                }
+            }
         }
     }
 }
