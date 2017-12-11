@@ -17,7 +17,7 @@ namespace BomberManProject.tile.build
         static int xTileMax = 18;
 
         int[,] map = new int[xTileMax, yTileMax];
-        public void PrintMap(List<ITile> list)
+        public int [,] PrintMap(List<ITile> list)
         {
             Console.WriteLine("Sugeneruoto žemėlapio atvaizdavimas skaičiais:");
             Console.WriteLine("0 - nenugriaunama siena");
@@ -66,6 +66,7 @@ namespace BomberManProject.tile.build
                 }
             }
             Console.WriteLine();
+            return map;
         }
     }
 }
