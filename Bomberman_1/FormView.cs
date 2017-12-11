@@ -15,6 +15,7 @@ using BomberManProject.player;
 using Bomberman_1.Game;
 using Bomberman_1.GameState;
 using Bomberman_1.GameState.States;
+using Bomberman_1.mouse_Event_Handler;
 using BomberManProject.commands;
 using BomberManProject.coordinates;
 using BomberManProject.eventHandling;
@@ -31,6 +32,7 @@ namespace Bomberman_1
             Left, Right, Up, Down
         }
 
+        private Boolean draw = true;
         private int _x;
         private int _y;
         private Position _objPosition;
@@ -38,10 +40,12 @@ namespace Bomberman_1
         private CommandsService commandService;
         private StateFactory stateFactory;
         private StateHistory.StateHistory stateHistory;
+        private MouseEventHandlerAdapter mouseEventHandler;
 
 
         public FormView()
         {
+            this.mouseEventHandler = new MouseEventHandlerAdapter();
             this.stateHistory = new StateHistory.StateHistory();
             this.stateFactory = new StateFactory();
             this.commandService = ServicesSingleton.getInstance().commandService;
@@ -55,31 +59,37 @@ namespace Bomberman_1
         
         private void FormView_Paint(object sender, PaintEventArgs e)
         {
-            Coordinates playerCoord = game.getPlayer().coordinates;
-            e.Graphics.FillRectangle(Brushes.BlueViolet, playerCoord.xCoordinate, playerCoord.YCoordinate, 45, 45);
 
-            IMapPart mapPart = new MapParts();
-            mapPart.accept(new MapPartDisplayVisitor(), sender, e);
+                Coordinates playerCoord = game.getPlayer().coordinates;
+                e.Graphics.FillRectangle(Brushes.BlueViolet, playerCoord.xCoordinate, playerCoord.YCoordinate, 45, 45);
+
+                IMapPart mapPart = new MapParts();
+                mapPart.accept(new MapPartDisplayVisitor(), sender, e);
+               // Invalidate();
+               // draw = false;
+            
+            //Refresh();
+
         }
 
         private void tmrMoving_Tick(object sender, EventArgs e)
         {
-            if (_objPosition == Position.Right)
-            {
-                _x += 10;
-            }
-            else if (_objPosition == Position.Left)
-            {
-                _x -= 10;
-            }
-            else if (_objPosition == Position.Up)
-            {
-                _y -= 10;
-            }
-            else if (_objPosition == Position.Down)
-            {
-                _y += 10;
-            }
+            //if (_objPosition == Position.Right)
+            //{
+            //    _x += 10;
+            //}
+            //else if (_objPosition == Position.Left)
+            //{
+            //    _x -= 10;
+            //}
+            //else if (_objPosition == Position.Up)
+            //{
+            //    _y -= 10;
+            //}
+            //else if (_objPosition == Position.Down)
+            //{
+            //    _y += 10;
+            //}
 
             Invalidate();
         }
@@ -123,6 +133,7 @@ namespace Bomberman_1
                 {
                     ICommand command = keyboard.handleEvent(game.getPlayer());
                     commandService.addCommand(command);
+                   // draw = true;
                 }
              }   
 
@@ -146,6 +157,11 @@ namespace Bomberman_1
          */
         }
 
+        protected override void OnMouseMove(MouseEventArgs e)
+        {
+          //  commandService.addCommand(mouseEventHandler.handleMouseEvent(game.getPlayer(), e)); 
+          ////xujovai veikia bet veikia
+        }
 
     }
 }
