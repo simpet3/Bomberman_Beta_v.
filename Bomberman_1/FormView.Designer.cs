@@ -1,6 +1,6 @@
 ﻿namespace Bomberman_1
 {
-    partial class Form1
+    partial class FormView
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.tmrMoving = new System.Windows.Forms.Timer(this.components);
+            this.SuspendLayout();
+            // 
+            // tmrMoving
+            // 
+            this.tmrMoving.Enabled = true;
+            this.tmrMoving.Tick += new System.EventHandler(this.tmrMoving_Tick);
+            // 
+            // FormView2
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(819, 431);
+            this.Name = "FormView2";
+            this.Text = "FormView2";
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormView_Paint);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormView_KeyDown);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Timer tmrMoving;
     }
 }
