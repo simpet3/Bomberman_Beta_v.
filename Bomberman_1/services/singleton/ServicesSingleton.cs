@@ -20,7 +20,7 @@ namespace BomberManProject.Singleton
 
         public static ServicesSingleton getInstance()
         {
-            Console.WriteLine("singleton veiki.");
+            Console.WriteLine("singleton veikia.");
             if (_instance == null)
             {
                 return new ServicesSingleton();

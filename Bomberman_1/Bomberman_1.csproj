@@ -68,6 +68,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameState\interfaces\State.cs" />
+    <Compile Include="GameState\StateContext.cs" />
+    <Compile Include="GameState\StateFactory.cs" />
+    <Compile Include="GameState\States\PausedState.cs" />
+    <Compile Include="GameState\States\PlayingState.cs" />
     <Compile Include="improvement\CountImprovement.cs" />
     <Compile Include="improvement\Improvement.cs" />
     <Compile Include="improvement\PowerImprovement.cs" />
@@ -88,6 +93,8 @@
     <Compile Include="services\mouse Data\MouseData.cs" />
     <Compile Include="services\singleton\ServicesSingleton.cs" />
     <Compile Include="services\singleton\Singleton.cs" />
+    <Compile Include="StateHistory\Memento.cs" />
+    <Compile Include="StateHistory\StateHistory.cs" />
     <Compile Include="tile\build\FactoryPattern.cs" />
     <Compile Include="tile\build\FillWithPathTile.cs" />
     <Compile Include="tile\build\PrintMapToConsole.cs" />
