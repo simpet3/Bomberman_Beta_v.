@@ -81,6 +81,7 @@
     <Compile Include="GameState\StateFactory.cs" />
     <Compile Include="GameState\States\PausedState.cs" />
     <Compile Include="GameState\States\PlayingState.cs" />
+    <Compile Include="Game\Game.cs" />
     <Compile Include="improvement\CountImprovement.cs" />
     <Compile Include="improvement\Improvement.cs" />
     <Compile Include="improvement\PowerImprovement.cs" />

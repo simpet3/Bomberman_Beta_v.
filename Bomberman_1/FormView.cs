@@ -11,6 +11,16 @@ using System.Windows.Forms;
 using BomberManProject.map;
 using BomberManProject.tile.build;
 using Bomberman_1.services;
+using BomberManProject.player;
+using Bomberman_1.Game;
+using Bomberman_1.GameState;
+using Bomberman_1.GameState.States;
+using BomberManProject.commands;
+using BomberManProject.coordinates;
+using BomberManProject.eventHandling;
+using BomberManProject.eventHandling.actionKeys;
+using BomberManProject.services;
+using BomberManProject.Singleton;
 
 namespace Bomberman_1
 {
@@ -24,10 +34,19 @@ namespace Bomberman_1
         private int _x;
         private int _y;
         private Position _objPosition;
+        private Game.Game game;
+        private CommandsService commandService;
+        private StateFactory stateFactory;
+        private StateHistory.StateHistory stateHistory;
 
 
         public FormView()
         {
+            this.stateHistory = new StateHistory.StateHistory();
+            this.stateFactory = new StateFactory();
+            this.commandService = ServicesSingleton.getInstance().commandService;
+            this.game = new Game.Game(new HumanPlayer());
+            this.game.setState(StateFactory.getState("PlayingState"));
             InitializeComponent();
             _x = 0;
             _y = 0;
@@ -36,7 +55,8 @@ namespace Bomberman_1
         
         private void FormView_Paint(object sender, PaintEventArgs e)
         {
-            e.Graphics.FillRectangle(Brushes.BlueViolet, _x, _y, 45, 45);
+            Coordinates playerCoord = game.getPlayer().coordinates;
+            e.Graphics.FillRectangle(Brushes.BlueViolet, playerCoord.xCoordinate, playerCoord.YCoordinate, 45, 45);
 
             IMapPart mapPart = new MapParts();
             mapPart.accept(new MapPartDisplayVisitor(), sender, e);
@@ -66,24 +86,66 @@ namespace Bomberman_1
 
         private void FormView_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.A)
+            State gameState = game.getState() as PlayingState;
+            if (e.KeyCode == Keys.P)
             {
-                _objPosition = Position.Left;
+                stateHistory.add(this.game.saveStateToMemento());
+                if (gameState != null)
+                {
+                    game.setState(StateFactory.getState("PausedState"));
+                }else
+                {
+                    game.setState(StateFactory.getState("PlayingState"));
+                }
             }
-            else if (e.KeyCode == Keys.D)
-            {
-                _objPosition = Position.Right;
-            }
-            else if (e.KeyCode == Keys.W)
-            {
-                _objPosition = Position.Up;
-            }
-            else if (e.KeyCode == Keys.S)
-            {
-                _objPosition = Position.Down;
-            }
+
+            if (gameState != null)
+            {             
+                Keyboard keyboard = null;
+                if (e.KeyCode == Keys.A)
+                {
+                    keyboard = new Keyboard(new ActionKeyLeft());
+                }
+                else if (e.KeyCode == Keys.D)
+                {
+                    keyboard = new Keyboard(new ActionKeyRight());
+                }
+                else if (e.KeyCode == Keys.W)
+                {
+                    keyboard = new Keyboard(new ActionKeyUp());
+                }
+                else if (e.KeyCode == Keys.S)
+                {
+                    keyboard = new Keyboard(new ActionKeyDown());
+                }
+
+                if (keyboard != null)
+                {
+                    ICommand command = keyboard.handleEvent(game.getPlayer());
+                    commandService.addCommand(command);
+                }
+             }   
+
+        /*
+                     if (e.KeyCode == Keys.A)
+        {
+            _objPosition = Position.Left;
+        }
+        else if (e.KeyCode == Keys.D)
+        {
+            _objPosition = Position.Right;
+        }
+        else if (e.KeyCode == Keys.W)
+        {
+            _objPosition = Position.Up;
+        }
+        else if (e.KeyCode == Keys.S)
+        {
+            _objPosition = Position.Down;
+        }
+         */
         }
 
-        
+
     }
 }

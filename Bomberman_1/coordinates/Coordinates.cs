@@ -8,9 +8,9 @@ namespace BomberManProject.coordinates
 {
     class Coordinates
     {
-        public int xCoordinate { get; private set; }
+        public int xCoordinate { get; set; }
 
-        public int YCoordinate { get; private set; }
+        public int YCoordinate { get; set; }
 
         public Coordinates(int xCoordinate, int yCoordinate)
         {

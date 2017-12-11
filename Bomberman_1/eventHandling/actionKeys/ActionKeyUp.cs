@@ -14,7 +14,7 @@ namespace BomberManProject.eventHandling.actionKeys
     {
         public ICommand createCommand(Player player)
         {
-            return new CommandMoveLeft(player);
+            return new CommandMoveUp(player);
         }
     }
 }

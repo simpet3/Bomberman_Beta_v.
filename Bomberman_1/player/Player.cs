@@ -55,22 +55,22 @@ namespace BomberManProject.player
 
         public void moveUp()
         {
-            Console.WriteLine("Moving up");
+            this.coordinates.YCoordinate -= 10;
         }
 
         public void moveDown()
         {
-            Console.WriteLine("Moving down");
+            this.coordinates.YCoordinate += 10;
         }
 
         public void moveLeft()
         {
-            Console.WriteLine("Moving left");
+            this.coordinates.xCoordinate -= 10;
         }
 
         public void moveRight()
         {
-            Console.WriteLine("Moving right");
+            this.coordinates.xCoordinate += 10;
         }
 
         public override int getImprovement()
