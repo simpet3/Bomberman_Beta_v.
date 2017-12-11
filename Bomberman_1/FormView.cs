@@ -83,5 +83,17 @@ namespace Bomberman_1
                 _objPosition = Position.Down;
             }
         }
+
+        private void textBox1_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+
+            // Determine whether the keystroke is a number from the top of the keyboard.
+            if (e.KeyCode == Keys.A)
+            {
+                System.Console.Out.WriteLine(" veikia A");
+            }
+
+        }
+
     }
 }
