@@ -22,6 +22,8 @@ using BomberManProject.eventHandling;
 using BomberManProject.eventHandling.actionKeys;
 using BomberManProject.services;
 using BomberManProject.Singleton;
+using Bomberman_1.Drawing.Template;
+using Bomberman_1.improvement.Chain_of_Responsibility;
 
 namespace Bomberman_1
 {
@@ -41,7 +43,7 @@ namespace Bomberman_1
         private StateFactory stateFactory;
         private StateHistory.StateHistory stateHistory;
         private MouseEventHandlerAdapter mouseEventHandler;
-
+        
 
         public FormView()
         {
@@ -56,18 +58,31 @@ namespace Bomberman_1
             _y = 0;
             _objPosition = Position.Down;
         }
-        
+
+        private void takeBuff()
+        {
+            Coordinates playerCoord = game.getPlayer().coordinates;
+            if (playerCoord.xCoordinate / 50 == 2 && playerCoord.YCoordinate / 50 == 0)
+            {
+                ChainOfBuffs cob = new ChainOfBuffs();
+                cob.doStuff();
+                Console.WriteLine("Taking buff");
+            }
+        }
+
         private void FormView_Paint(object sender, PaintEventArgs e)
         {
 
-                Coordinates playerCoord = game.getPlayer().coordinates;
-                e.Graphics.FillRectangle(Brushes.BlueViolet, playerCoord.xCoordinate, playerCoord.YCoordinate, 45, 45);
+            Coordinates playerCoord = game.getPlayer().coordinates;
+            Painting paint = new PaintingTemplate2();
+                paint.draw(sender, e, playerCoord.xCoordinate, playerCoord.YCoordinate);
+            //e.Graphics.FillRectangle(Brushes.BlueViolet, playerCoord.xCoordinate, playerCoord.YCoordinate, 45, 45);
 
-                IMapPart mapPart = new MapParts();
-                mapPart.accept(new MapPartDisplayVisitor(), sender, e);
-               // Invalidate();
-               // draw = false;
-            
+            //IMapPart mapPart = new MapParts();
+            //mapPart.accept(new MapPartDisplayVisitor(), sender, e);
+            // Invalidate();
+            // draw = false;
+
             //Refresh();
 
         }
@@ -91,6 +106,10 @@ namespace Bomberman_1
             //    _y += 10;
             //}
 
+            // Tik testavimui
+            Coordinates playerCoord = game.getPlayer().coordinates;
+            if (playerCoord.xCoordinate / 50 == 2 && playerCoord.YCoordinate / 50 == 0)
+                takeBuff();
             Invalidate();
         }
 

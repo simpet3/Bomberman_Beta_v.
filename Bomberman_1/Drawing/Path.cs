@@ -9,9 +9,9 @@ namespace Bomberman_1.Drawing
 {
     public class Path : IMapPart
     {
-        public void accept(IMapPartVisitor mapPartVisitor, object sender, PaintEventArgs e)
+        public void accept(IMapPartVisitor mapPartVisitor, int index, object sender, PaintEventArgs e)
         {
-            mapPartVisitor.visit(this, sender, e);
+            mapPartVisitor.visit(this, index, sender, e);
         }
     }
 }

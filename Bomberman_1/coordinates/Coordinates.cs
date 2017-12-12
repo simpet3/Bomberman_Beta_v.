@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BomberManProject.coordinates
 {
-    class Coordinates
+    public class Coordinates
     {
         public int xCoordinate { get; set; }
 

@@ -7,7 +7,7 @@ using BomberManProject.player;
 
 namespace BomberManProject.improvement
 {
-    abstract class Improvement
+    public abstract class Improvement
     {
         public abstract int getImprovement();
     }

@@ -16,13 +16,13 @@ namespace Bomberman_1.Drawing
             parts = new IMapPart[] { new Path(), new Destructable(), new Undestructable(), new WithBuff() };
         }
 
-        public void accept(IMapPartVisitor mapPartVisitor, object sender, PaintEventArgs e)
+        public void accept(IMapPartVisitor mapPartVisitor, int index, object sender, PaintEventArgs e)
         {
             for (int i = 0; i < parts.Length; i++)
             {
-                parts[i].accept(mapPartVisitor, sender, e);
+                parts[i].accept(mapPartVisitor, index, sender, e);
             }
-            mapPartVisitor.visit(this, sender, e);
+            mapPartVisitor.visit(this, index, sender, e);
         }
     }
 }

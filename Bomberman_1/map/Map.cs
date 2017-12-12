@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BomberManProject.map
 {
-    class Map
+    public class Map
     {
         public List<ITile> tiles = new List<ITile>();
         //public List<ITile> tiles { get; private set; }

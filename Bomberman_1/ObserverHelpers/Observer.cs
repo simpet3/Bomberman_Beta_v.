@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bomberman_1.ObserverHelpers
 {
-     abstract class Observer
+     public abstract class Observer
     {  
         public abstract void updateAfterExplosion();
     }

@@ -9,10 +9,10 @@ namespace Bomberman_1.Drawing
 {
     public interface IMapPartVisitor
     {
-        void visit(Path computer, object sender, PaintEventArgs e);
-        void visit(Destructable mouse, object sender, PaintEventArgs e);
-        void visit(WithBuff withBuff, object sender, PaintEventArgs e);
-        void visit(Undestructable keyboard, object sender, PaintEventArgs e);
-        void visit(MapParts mapDrawing, object sender, PaintEventArgs e);
+        void visit(Path computer, int index, object sender, PaintEventArgs e);
+        void visit(Destructable mouse, int index,  object sender, PaintEventArgs e);
+        void visit(WithBuff withBuff, int index, object sender, PaintEventArgs e);
+        void visit(Undestructable keyboard, int index, object sender, PaintEventArgs e);
+        void visit(MapParts mapDrawing, int index, object sender, PaintEventArgs e);
     }
 }

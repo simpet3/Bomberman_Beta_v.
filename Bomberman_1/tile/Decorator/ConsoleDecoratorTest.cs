@@ -33,7 +33,7 @@ namespace BomberManProject.tile.decorator
 
             // MANO TESTAVIMAS
             // i ataskaita kanors graziau sumastysiu
-            Console.WriteLine();
+            //Console.WriteLine();
             Console.WriteLine("Player has no power-up");
             List<Improvement> imp = new List<Improvement>();
             imp.Add(new PowerImprovement());

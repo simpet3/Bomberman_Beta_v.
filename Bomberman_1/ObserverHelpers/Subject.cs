@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bomberman_1.ObserverHelpers
 {
-    abstract class Subject
+    public abstract class Subject
     {
         private List<Observer> observers = new List<Observer>();
         

@@ -9,6 +9,6 @@ namespace Bomberman_1.Drawing
 {
     public interface IMapPart
     {
-        void accept(IMapPartVisitor mapPartVisitor, object sender, PaintEventArgs e);
+        void accept(IMapPartVisitor mapPartVisitor, int index, object sender, PaintEventArgs e);
     }
 }

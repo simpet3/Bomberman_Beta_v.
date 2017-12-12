@@ -49,7 +49,7 @@ namespace Bomberman_1
             //    Boolean loopActive = true;
             //    ConsoleKeyInfo keyInfo;
             //    HumanPlayer humanPlayer = new HumanPlayer();
-            //    Console.WriteLine("\n\n Command and bridge pattern test \n");
+                Console.WriteLine("\n\n Command and bridge pattern test \n");
             //    while (loopActive)
             //    {
             //        keyInfo = Console.ReadKey();

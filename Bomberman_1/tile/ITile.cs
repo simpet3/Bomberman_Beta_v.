@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BomberManProject.tile
 {
-    interface ITile
+    public interface ITile
     {
         TileCoordinates getCoordinates();
     }

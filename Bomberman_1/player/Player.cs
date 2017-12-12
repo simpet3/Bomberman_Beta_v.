@@ -13,7 +13,7 @@ using BomberManProject.improvement;
 //Player implements this class
 namespace BomberManProject.player
 {
-    abstract class Player : Improvement
+    public abstract class Player : Improvement
     {
         public  Boolean isDead { get; set; }
 
@@ -73,6 +73,15 @@ namespace BomberManProject.player
             this.coordinates.xCoordinate += 10;
         }
 
+        public Improvement getImprov()
+        {
+            if (improvement != null)
+                return improvement;
+            else
+                return null;
+        }
+
+        //Cia galimai grybas
         public override int getImprovement()
         {
             if (improvement != null)

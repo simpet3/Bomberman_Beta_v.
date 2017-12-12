@@ -19,6 +19,8 @@ namespace Bomberman_1.Drawing
         public int[,] map = mapInConsole();
         static int yTileMax = 18;
         static int xTileMax = 18;
+        static int Template1 = 1;
+        static int Template2 = 2;
 
         static public int[,] mapInConsole()
         {
@@ -27,58 +29,59 @@ namespace Bomberman_1.Drawing
             return a.PrintMap(map.tiles);
         }
 
-        public void visit(MapParts mapParts, object sender, PaintEventArgs e)
+        public void visit(MapParts mapParts, int index, object sender, PaintEventArgs e)
         {
            
         }
 
-        public void visit(Path path, object sender, PaintEventArgs e)
+        public void visit(Path path, int index, object sender, PaintEventArgs e)
         {
-            //for (int i = 0; i < xTileMax; i++)
-            //{
-            //    Console.WriteLine();
-            //    for (int j = 0; j < yTileMax; j++)
-            //    {
-            //        if(map[i,j] == 3)
-            //            e.Graphics.FillRectangle(Brushes.WhiteSmoke, i * 50, j * 50, 50, 50);
-            //    }
-            //}
+            // == 0
         }
 
-        public void visit(Destructable destructable, object sender, PaintEventArgs e)
+        public void visit(Destructable destructable, int index, object sender, PaintEventArgs e)
         {
             for (int i = 0; i < xTileMax; i++)
             {
-                Console.WriteLine();
+                //Console.WriteLine();
                 for (int j = 0; j < yTileMax; j++)
                 {
                     if (map[i, j] == 1)
-                        e.Graphics.FillRectangle(Brushes.Brown, i * 50, j * 50, 50, 50);
+                        if(index == Template1)
+                            e.Graphics.FillRectangle(Brushes.Brown, i * 50, j * 50, 50, 50);
+                        else
+                            e.Graphics.FillRectangle(Brushes.LightBlue, i * 50, j * 50, 50, 50);
                 }
             }
         }
 
-        public void visit(Undestructable undestructable, object sender, PaintEventArgs e)
+        public void visit(Undestructable undestructable, int index, object sender, PaintEventArgs e)
         {
             for (int i = 0; i < xTileMax; i++)
             {
-                Console.WriteLine();
+                //Console.WriteLine();
                 for (int j = 0; j < yTileMax; j++)
                 {
-                    if (map[i, j] == 0)
-                        e.Graphics.FillRectangle(Brushes.Black, i * 50, j * 50, 50, 50);
+                    if (map[i, j] == 0)  
+                        if (index == Template1)
+                            e.Graphics.FillRectangle(Brushes.Black, i * 50, j * 50, 50, 50);
+                        else
+                            e.Graphics.FillRectangle(Brushes.LightSalmon, i * 50, j * 50, 50, 50);
                 }
             }
         }
-        public void visit(WithBuff withBuff, object sender, PaintEventArgs e)
+        public void visit(WithBuff withBuff, int index, object sender, PaintEventArgs e)
         {
             for (int i = 0; i < xTileMax; i++)
             {
-                Console.WriteLine();
+                //Console.WriteLine();
                 for (int j = 0; j < yTileMax; j++)
                 {
                     if (map[i, j] == 2)
-                        e.Graphics.FillRectangle(Brushes.Blue, i * 50, j * 50, 50, 50);
+                        if (index == Template1)
+                            e.Graphics.FillRectangle(Brushes.Red, i * 50, j * 50, 50, 50);
+                        else
+                            e.Graphics.FillRectangle(Brushes.LightYellow, i * 50, j * 50, 50, 50);
                 }
             }
         }

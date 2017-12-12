@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BomberManProject.bomb
 {
-    class Bomb : Subject 
+    public class Bomb : Subject 
     {
         public double durationOfDetonation { get; private set; }
 
