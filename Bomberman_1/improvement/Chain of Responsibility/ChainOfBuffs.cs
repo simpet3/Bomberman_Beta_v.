@@ -12,12 +12,12 @@ namespace Bomberman_1.improvement.Chain_of_Responsibility
 
         public static AbstractBuffGiver getChainOfBuffs()
         {
-            AbstractBuffGiver removeBuff = new PowerGiver(AbstractBuffGiver.NONE);
+            AbstractBuffGiver removeBuff = new BuffRemover(AbstractBuffGiver.NONE);
             AbstractBuffGiver powerBuff = new PowerGiver(AbstractBuffGiver.POWER);
-            AbstractBuffGiver countBuff = new PowerGiver(AbstractBuffGiver.COUNT);
+            AbstractBuffGiver countBuff = new CountGiver(AbstractBuffGiver.COUNT);
 
-            removeBuff.setNextLogger(powerBuff);
-            powerBuff.setNextLogger(countBuff);
+            removeBuff.setNextBuffGiver(powerBuff);
+            powerBuff.setNextBuffGiver(countBuff);
 
             return removeBuff;
         }
@@ -27,7 +27,7 @@ namespace Bomberman_1.improvement.Chain_of_Responsibility
         {
             Player p = new ProxyPlayer();
             AbstractBuffGiver buffChain = getChainOfBuffs();
-            p = buffChain.giveBuff(AbstractBuffGiver.POWER, p);
+            p = buffChain.giveBuff(AbstractBuffGiver.COUNT, p);
             Console.WriteLine(p.getImprov().GetType().ToString());
         }
     }

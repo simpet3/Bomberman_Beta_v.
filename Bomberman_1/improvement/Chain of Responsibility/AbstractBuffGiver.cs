@@ -19,14 +19,14 @@ namespace Bomberman_1.improvement.Chain_of_Responsibility
         //next element in chain or responsibility
         protected AbstractBuffGiver nextBuffGiver;
 
-        public void setNextLogger(AbstractBuffGiver nextBuffGiver)
+        public void setNextBuffGiver(AbstractBuffGiver nextBuffGiver)
         {
             this.nextBuffGiver = nextBuffGiver;
         }
 
         public Player giveBuff(int level, Player p)
         {
-            if (this.level <= level)
+            if (this.level >= level)
             {
                 return give(p);
             }
